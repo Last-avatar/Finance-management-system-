@@ -10,21 +10,14 @@ using System.Windows.Forms;
 
 namespace RTC
 {
-    public partial class UserM : Form
+    public partial class BranchM : Form
     {
-        public UserM()
+        public BranchM()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            ADashbord obj = new ADashbord();
-            obj.Show();
-            this.Hide();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
         }
@@ -39,9 +32,9 @@ namespace RTC
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            BranchM obj = new BranchM();
+            ADashbord obj = new ADashbord();
             obj.Show();
             this.Hide();
         }
@@ -49,6 +42,13 @@ namespace RTC
         private void label4_Click(object sender, EventArgs e)
         {
             Login obj = new Login();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            UserM obj = new UserM();
             obj.Show();
             this.Hide();
         }

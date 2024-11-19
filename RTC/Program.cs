@@ -16,7 +16,7 @@ namespace RTC
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ADashbord());
+            Application.Run(new Login());
         }
     }
 }

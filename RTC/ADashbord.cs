@@ -39,7 +39,23 @@ namespace RTC
 
         private void label2_Click(object sender, EventArgs e)
         {
+            UserM obj = new UserM();
+            obj.Show();
+            this.Hide();
+        }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
+            BranchM obj = new BranchM();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Login obj = new Login();
+            obj.Show();
+            this.Hide();
         }
     }
 }

@@ -58,6 +58,12 @@
     <Compile Include="ADashbord.Designer.cs">
       <DependentUpon>ADashbord.cs</DependentUpon>
     </Compile>
+    <Compile Include="BranchM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BranchM.Designer.cs">
+      <DependentUpon>BranchM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ADashbord.resx">
       <DependentUpon>ADashbord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BranchM.resx">
+      <DependentUpon>BranchM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -160,6 +169,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user-solid-24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\building-house-regular-24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\building-house-regular-24 %282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

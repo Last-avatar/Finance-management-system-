@@ -26,5 +26,32 @@ namespace RTC
         {
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (PasswordTb.Text == "")
+            {
+                MessageBox.Show("Enter Admin Password !");
+
+            }
+            else
+            {
+                if (PasswordTb.Text == "123")
+                {
+                    ADashbord obj = new ADashbord();
+                    obj.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Wrong Admin Password");
+                }
+            }
+        }
     }
 }
