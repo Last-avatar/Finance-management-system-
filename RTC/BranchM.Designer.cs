@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.BranchDGV = new System.Windows.Forms.DataGridView();
+            this.SaveBt = new System.Windows.Forms.Button();
+            this.EditBt = new System.Windows.Forms.Button();
+            this.BAddressTb = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.BnameTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.DeleteBt = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -53,7 +53,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BranchDGV)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -68,45 +68,49 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // BranchDGV
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(336, 323);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1102, 436);
-            this.dataGridView1.TabIndex = 3;
+            this.BranchDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.BranchDGV.Location = new System.Drawing.Point(336, 323);
+            this.BranchDGV.Name = "BranchDGV";
+            this.BranchDGV.RowHeadersWidth = 51;
+            this.BranchDGV.RowTemplate.Height = 24;
+            this.BranchDGV.Size = new System.Drawing.Size(1102, 436);
+            this.BranchDGV.TabIndex = 3;
+            this.BranchDGV.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.BranchDGV_CellMouseClick);
+            this.BranchDGV.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.BranchDGV_RowHeaderMouseClick);
             // 
-            // button2
+            // SaveBt
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(356, 121);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 36);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = true;
+            this.SaveBt.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveBt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.SaveBt.Location = new System.Drawing.Point(356, 121);
+            this.SaveBt.Name = "SaveBt";
+            this.SaveBt.Size = new System.Drawing.Size(117, 36);
+            this.SaveBt.TabIndex = 7;
+            this.SaveBt.Text = "Save";
+            this.SaveBt.UseVisualStyleBackColor = true;
+            this.SaveBt.Click += new System.EventHandler(this.SaveBt_Click);
             // 
-            // button1
+            // EditBt
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(164, 121);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 36);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Edit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.EditBt.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditBt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.EditBt.Location = new System.Drawing.Point(164, 121);
+            this.EditBt.Name = "EditBt";
+            this.EditBt.Size = new System.Drawing.Size(117, 36);
+            this.EditBt.TabIndex = 6;
+            this.EditBt.Text = "Edit";
+            this.EditBt.UseVisualStyleBackColor = true;
+            this.EditBt.Click += new System.EventHandler(this.EditBt_Click);
             // 
-            // textBox2
+            // BAddressTb
             // 
-            this.textBox2.Location = new System.Drawing.Point(477, 58);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(202, 30);
-            this.textBox2.TabIndex = 5;
+            this.BAddressTb.Location = new System.Drawing.Point(477, 58);
+            this.BAddressTb.Multiline = true;
+            this.BAddressTb.Name = "BAddressTb";
+            this.BAddressTb.Size = new System.Drawing.Size(202, 30);
+            this.BAddressTb.TabIndex = 5;
             // 
             // label8
             // 
@@ -120,13 +124,13 @@
             this.label8.Text = "Address :";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // textBox1
+            // BnameTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(153, 58);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(202, 30);
-            this.textBox1.TabIndex = 1;
+            this.BnameTB.Location = new System.Drawing.Point(153, 58);
+            this.BnameTB.Multiline = true;
+            this.BnameTB.Name = "BnameTB";
+            this.BnameTB.Size = new System.Drawing.Size(202, 30);
+            this.BnameTB.TabIndex = 1;
             // 
             // label2
             // 
@@ -143,12 +147,12 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.LightGray;
-            this.panel6.Controls.Add(this.button3);
-            this.panel6.Controls.Add(this.button2);
-            this.panel6.Controls.Add(this.button1);
-            this.panel6.Controls.Add(this.textBox2);
+            this.panel6.Controls.Add(this.DeleteBt);
+            this.panel6.Controls.Add(this.SaveBt);
+            this.panel6.Controls.Add(this.EditBt);
+            this.panel6.Controls.Add(this.BAddressTb);
             this.panel6.Controls.Add(this.label8);
-            this.panel6.Controls.Add(this.textBox1);
+            this.panel6.Controls.Add(this.BnameTB);
             this.panel6.Controls.Add(this.label2);
             this.panel6.Location = new System.Drawing.Point(491, 114);
             this.panel6.Name = "panel6";
@@ -156,20 +160,21 @@
             this.panel6.TabIndex = 2;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
-            // button3
+            // DeleteBt
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button3.Location = new System.Drawing.Point(544, 121);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(117, 36);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = true;
+            this.DeleteBt.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteBt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.DeleteBt.Location = new System.Drawing.Point(544, 121);
+            this.DeleteBt.Name = "DeleteBt";
+            this.DeleteBt.Size = new System.Drawing.Size(117, 36);
+            this.DeleteBt.TabIndex = 8;
+            this.DeleteBt.Text = "Delete";
+            this.DeleteBt.UseVisualStyleBackColor = true;
+            this.DeleteBt.Click += new System.EventHandler(this.DeleteBt_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.BranchDGV);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -178,6 +183,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1489, 775);
             this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel3
             // 
@@ -357,7 +363,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "BranchM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BranchDGV)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -381,20 +387,20 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DataGridView BranchDGV;
+        private System.Windows.Forms.Button SaveBt;
+        private System.Windows.Forms.Button EditBt;
+        private System.Windows.Forms.TextBox BAddressTb;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox BnameTB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button DeleteBt;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox6;

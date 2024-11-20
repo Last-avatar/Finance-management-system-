@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.DeleteBt = new System.Windows.Forms.Button();
+            this.SaveBt = new System.Windows.Forms.Button();
+            this.EditTb = new System.Windows.Forms.Button();
+            this.UpasswordTb = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.UTypeTb = new System.Windows.Forms.ComboBox();
+            this.UNameTB = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -56,8 +56,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel2.SuspendLayout();
@@ -82,68 +82,75 @@
             this.panel1.Size = new System.Drawing.Size(1489, 775);
             this.panel1.TabIndex = 1;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(336, 321);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1102, 436);
+            this.dataGridView1.TabIndex = 3;
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.LightGray;
-            this.panel6.Controls.Add(this.button3);
-            this.panel6.Controls.Add(this.button2);
-            this.panel6.Controls.Add(this.button1);
-            this.panel6.Controls.Add(this.textBox2);
+            this.panel6.Controls.Add(this.DeleteBt);
+            this.panel6.Controls.Add(this.SaveBt);
+            this.panel6.Controls.Add(this.EditTb);
+            this.panel6.Controls.Add(this.UpasswordTb);
             this.panel6.Controls.Add(this.label8);
             this.panel6.Controls.Add(this.label7);
-            this.panel6.Controls.Add(this.comboBox1);
-            this.panel6.Controls.Add(this.textBox1);
+            this.panel6.Controls.Add(this.UTypeTb);
+            this.panel6.Controls.Add(this.UNameTB);
             this.panel6.Controls.Add(this.label2);
             this.panel6.Location = new System.Drawing.Point(405, 111);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(999, 180);
             this.panel6.TabIndex = 2;
             // 
-            // label2
+            // DeleteBt
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(129, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 26);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Username :";
+            this.DeleteBt.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteBt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.DeleteBt.Location = new System.Drawing.Point(616, 125);
+            this.DeleteBt.Name = "DeleteBt";
+            this.DeleteBt.Size = new System.Drawing.Size(117, 36);
+            this.DeleteBt.TabIndex = 8;
+            this.DeleteBt.Text = "Delete";
+            this.DeleteBt.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // SaveBt
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 64);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(202, 30);
-            this.textBox1.TabIndex = 1;
+            this.SaveBt.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveBt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.SaveBt.Location = new System.Drawing.Point(428, 125);
+            this.SaveBt.Name = "SaveBt";
+            this.SaveBt.Size = new System.Drawing.Size(117, 36);
+            this.SaveBt.TabIndex = 7;
+            this.SaveBt.Text = "Save";
+            this.SaveBt.UseVisualStyleBackColor = true;
+            this.SaveBt.Click += new System.EventHandler(this.button2_Click);
             // 
-            // comboBox1
+            // EditTb
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(406, 64);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(172, 30);
-            this.comboBox1.TabIndex = 2;
+            this.EditTb.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditTb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.EditTb.Location = new System.Drawing.Point(236, 125);
+            this.EditTb.Name = "EditTb";
+            this.EditTb.Size = new System.Drawing.Size(117, 36);
+            this.EditTb.TabIndex = 6;
+            this.EditTb.Text = "Edit";
+            this.EditTb.UseVisualStyleBackColor = true;
+            this.EditTb.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label7
+            // UpasswordTb
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label7.Location = new System.Drawing.Point(423, 23);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 26);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "User Type :";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(679, 60);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(202, 30);
-            this.textBox2.TabIndex = 5;
+            this.UpasswordTb.Location = new System.Drawing.Point(679, 60);
+            this.UpasswordTb.Multiline = true;
+            this.UpasswordTb.Name = "UpasswordTb";
+            this.UpasswordTb.Size = new System.Drawing.Size(202, 30);
+            this.UpasswordTb.TabIndex = 5;
             // 
             // label8
             // 
@@ -157,48 +164,43 @@
             this.label8.Text = "Password :";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // button1
+            // label7
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(236, 125);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 36);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Edit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label7.Location = new System.Drawing.Point(423, 23);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(117, 26);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "User Type :";
             // 
-            // button2
+            // UTypeTb
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(428, 125);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 36);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = true;
+            this.UTypeTb.FormattingEnabled = true;
+            this.UTypeTb.Location = new System.Drawing.Point(406, 64);
+            this.UTypeTb.Name = "UTypeTb";
+            this.UTypeTb.Size = new System.Drawing.Size(172, 30);
+            this.UTypeTb.TabIndex = 2;
             // 
-            // button3
+            // UNameTB
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button3.Location = new System.Drawing.Point(616, 125);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(117, 36);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = true;
+            this.UNameTB.Location = new System.Drawing.Point(118, 64);
+            this.UNameTB.Multiline = true;
+            this.UNameTB.Name = "UNameTB";
+            this.UNameTB.Size = new System.Drawing.Size(202, 30);
+            this.UNameTB.TabIndex = 1;
             // 
-            // dataGridView1
+            // label2
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(336, 321);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1102, 436);
-            this.dataGridView1.TabIndex = 3;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(129, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 26);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Username :";
             // 
             // panel3
             // 
@@ -381,9 +383,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "    ";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -421,15 +423,15 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox UNameTB;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox UTypeTb;
+        private System.Windows.Forms.TextBox UpasswordTb;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button DeleteBt;
+        private System.Windows.Forms.Button SaveBt;
+        private System.Windows.Forms.Button EditTb;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
