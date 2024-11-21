@@ -61,7 +61,7 @@ namespace RTC
                     cmd.Parameters.AddWithValue("@Bkey", key);
 
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Room Updated!!!");
+                    MessageBox.Show("Branch Updated!!!");
                     BnameTB.Clear();
                     BAddressTb.Clear();
                     populate();

@@ -1,6 +1,6 @@
 ﻿namespace RTC
 {
-    partial class UserM
+    partial class SEUserM
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.CUserDGV = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.UphoneNoTb = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.DeleteBt = new System.Windows.Forms.Button();
             this.SaveBt = new System.Windows.Forms.Button();
             this.EditTb = new System.Windows.Forms.Button();
@@ -38,8 +38,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.UNameTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.UphoneNoTb = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.SEUserDGV = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -69,9 +69,9 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CUserDGV)).BeginInit();
             this.panel6.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SEUserDGV)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel2.SuspendLayout();
@@ -91,30 +91,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.CUserDGV);
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(-2, -3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1489, 775);
-            this.panel1.TabIndex = 1;
-            // 
-            // CUserDGV
-            // 
-            this.CUserDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.CUserDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CUserDGV.Location = new System.Drawing.Point(336, 321);
-            this.CUserDGV.Name = "CUserDGV";
-            this.CUserDGV.RowHeadersWidth = 51;
-            this.CUserDGV.RowTemplate.Height = 24;
-            this.CUserDGV.Size = new System.Drawing.Size(1102, 436);
-            this.CUserDGV.TabIndex = 3;
-            this.CUserDGV.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.CUserDGV_RowHeaderMouseClick);
-            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.LightGray;
@@ -131,6 +107,25 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(999, 180);
             this.panel6.TabIndex = 2;
+            // 
+            // UphoneNoTb
+            // 
+            this.UphoneNoTb.Location = new System.Drawing.Point(625, 64);
+            this.UphoneNoTb.Multiline = true;
+            this.UphoneNoTb.Name = "UphoneNoTb";
+            this.UphoneNoTb.Size = new System.Drawing.Size(202, 30);
+            this.UphoneNoTb.TabIndex = 10;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label7.Location = new System.Drawing.Point(662, 27);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(116, 26);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Phone No :";
             // 
             // DeleteBt
             // 
@@ -154,7 +149,7 @@
             this.SaveBt.TabIndex = 7;
             this.SaveBt.Text = "Save";
             this.SaveBt.UseVisualStyleBackColor = true;
-            this.SaveBt.Click += new System.EventHandler(this.button2_Click);
+            this.SaveBt.Click += new System.EventHandler(this.SaveBt_Click);
             // 
             // EditTb
             // 
@@ -166,7 +161,7 @@
             this.EditTb.TabIndex = 6;
             this.EditTb.Text = "Edit";
             this.EditTb.UseVisualStyleBackColor = true;
-            this.EditTb.Click += new System.EventHandler(this.button1_Click);
+            this.EditTb.Click += new System.EventHandler(this.EditTb_Click);
             // 
             // UpasswordTb
             // 
@@ -186,7 +181,6 @@
             this.label8.Size = new System.Drawing.Size(112, 26);
             this.label8.TabIndex = 4;
             this.label8.Text = "Password :";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // UNameTB
             // 
@@ -207,24 +201,29 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Username :";
             // 
-            // UphoneNoTb
+            // panel1
             // 
-            this.UphoneNoTb.Location = new System.Drawing.Point(625, 64);
-            this.UphoneNoTb.Multiline = true;
-            this.UphoneNoTb.Name = "UphoneNoTb";
-            this.UphoneNoTb.Size = new System.Drawing.Size(202, 30);
-            this.UphoneNoTb.TabIndex = 10;
+            this.panel1.Controls.Add(this.SEUserDGV);
+            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(-2, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1489, 775);
+            this.panel1.TabIndex = 3;
             // 
-            // label7
+            // SEUserDGV
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label7.Location = new System.Drawing.Point(662, 27);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 26);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Phone No :";
+            this.SEUserDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.SEUserDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SEUserDGV.Location = new System.Drawing.Point(336, 321);
+            this.SEUserDGV.Name = "SEUserDGV";
+            this.SEUserDGV.RowHeadersWidth = 51;
+            this.SEUserDGV.RowTemplate.Height = 24;
+            this.SEUserDGV.Size = new System.Drawing.Size(1102, 436);
+            this.SEUserDGV.TabIndex = 3;
+            this.SEUserDGV.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SEUserDGV_RowHeaderMouseClick);
             // 
             // panel3
             // 
@@ -378,7 +377,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label11.Location = new System.Drawing.Point(58, 6);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(166, 25);
@@ -420,7 +419,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(101, 5);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(75, 25);
@@ -438,13 +437,12 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.pictureBox5);
             this.panel5.Controls.Add(this.label4);
-            this.panel5.Location = new System.Drawing.Point(4, 714);
+            this.panel5.Location = new System.Drawing.Point(3, 713);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(304, 54);
             this.panel5.TabIndex = 6;
@@ -539,6 +537,7 @@
             this.label6.Size = new System.Drawing.Size(202, 30);
             this.label6.TabIndex = 4;
             this.label6.Text = "User Management";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // pictureBox1
             // 
@@ -550,20 +549,19 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // UserM
+            // SEUserM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1485, 772);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "UserM";
+            this.Name = "SEUserM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "    ";
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.CUserDGV)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SEUserDGV)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -598,46 +596,46 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox UNameTB;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox UpasswordTb;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox UphoneNoTb;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button DeleteBt;
         private System.Windows.Forms.Button SaveBt;
         private System.Windows.Forms.Button EditTb;
-        private System.Windows.Forms.DataGridView CUserDGV;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox UpasswordTb;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox UNameTB;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox UphoneNoTb;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView SEUserDGV;
     }
 }

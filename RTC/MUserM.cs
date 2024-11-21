@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace RTC
 {
-    public partial class UserM : Form
+    public partial class MUserM : Form
     {
-        public UserM()
+        public MUserM()
         {
             InitializeComponent();
             populate();
@@ -27,12 +27,12 @@ namespace RTC
 
                 SqlConnection con = new SqlConnection(conString);
                 con.Open();
-                String Query = "select * from CashierTB";
+                String Query = "select * from ManagerTB";
                 SqlDataAdapter sda = new SqlDataAdapter(Query, con);
                 SqlCommandBuilder builder = new SqlCommandBuilder(sda);
                 var ds = new DataSet();
                 sda.Fill(ds);
-                CUserDGV.DataSource = ds.Tables[0];
+                MUserDGV.DataSource = ds.Tables[0];
                 con.Close();
             }
             catch (Exception ex)
@@ -54,11 +54,11 @@ namespace RTC
                 {
                     con.Open();
 
-                    SqlCommand cmd = new SqlCommand("update CashierTB set CName = @CN, CPassword = @CPa, CPhone = @CPh where CID = @Ckey", con);
-                    cmd.Parameters.AddWithValue("@CN", UNameTB.Text);
-                    cmd.Parameters.AddWithValue("@CPa", UpasswordTb.Text);
-                    cmd.Parameters.AddWithValue("@CPh", UphoneNoTb.Text);
-                    cmd.Parameters.AddWithValue("@Ckey", key);
+                    SqlCommand cmd = new SqlCommand("update ManagerTB set MName = @MN, MPassword = @MPa, MPhone = @MPh where MID = @Mkey", con);
+                    cmd.Parameters.AddWithValue("@MN", UNameTB.Text);
+                    cmd.Parameters.AddWithValue("@MPa", UpasswordTb.Text);
+                    cmd.Parameters.AddWithValue("@MPh", UphoneNoTb.Text);
+                    cmd.Parameters.AddWithValue("@Mkey", key);
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("User Updated!!!");
@@ -91,8 +91,8 @@ namespace RTC
                 try
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("delete from CashierTB where CID = @Ckey", con);
-                    cmd.Parameters.AddWithValue("@Ckey", key);
+                    SqlCommand cmd = new SqlCommand("delete from ManagerTB where MID = @Mkey", con);
+                    cmd.Parameters.AddWithValue("@Mkey", key);
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("User Deleted!!!");
@@ -128,10 +128,10 @@ namespace RTC
                 try
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into CashierTB (CName,CPassword,CPhone) values(@CN,@CPa,@CPh)", con);
-                    cmd.Parameters.AddWithValue("@CN", UNameTB.Text);
-                    cmd.Parameters.AddWithValue("@CPa",UpasswordTb.Text);
-                    cmd.Parameters.AddWithValue("@CPh",UphoneNoTb.Text);
+                    SqlCommand cmd = new SqlCommand("insert into ManagerTB (MName,MPassword,MPhone) values(@MN,@MPa,@MPh)", con);
+                    cmd.Parameters.AddWithValue("@MN", UNameTB.Text);
+                    cmd.Parameters.AddWithValue("@MPa", UpasswordTb.Text);
+                    cmd.Parameters.AddWithValue("@MPh", UphoneNoTb.Text);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("User Updated!!!");
                     UNameTB.Clear();
@@ -156,19 +156,49 @@ namespace RTC
             this.Hide();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void EditTb_Click(object sender, EventArgs e)
         {
-
+            EditUser();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void SaveBt_Click(object sender, EventArgs e)
         {
-
+            InsertUser();
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void DeleteBt_Click(object sender, EventArgs e)
         {
+            DeleteUser();
+        }
 
+        private void MUserDGV_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            UNameTB.Text = MUserDGV.SelectedRows[0].Cells[1].Value.ToString();
+            UpasswordTb.Text = MUserDGV.SelectedRows[0].Cells[2].Value.ToString();
+            UphoneNoTb.Text = MUserDGV.SelectedRows[0].Cells[3].Value.ToString();
+
+            if (UNameTB.Text == "")
+            {
+                key = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(MUserDGV.SelectedRows[0].Cells[0].Value.ToString());
+            }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            UserM obj = new UserM();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            UserM obj = new UserM();
+            obj.Show();
+            this.Hide();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -185,54 +215,16 @@ namespace RTC
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void label10_Click(object sender, EventArgs e)
         {
-            EditUser();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            InsertUser();
+            MUserM obj = new MUserM();
+            obj.Show();
+            this.Hide();
         }
 
         private void label11_Click(object sender, EventArgs e)
         {
             SEUserM obj = new SEUserM();
-            obj.Show();
-            this.Hide();
-        }
-
-        private void DeleteBt_Click(object sender, EventArgs e)
-        {
-            DeleteUser();
-        }
-
-        private void CUserDGV_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            UNameTB.Text = CUserDGV.SelectedRows[0].Cells[1].Value.ToString();
-            UpasswordTb.Text = CUserDGV.SelectedRows[0].Cells[2].Value.ToString();
-            UphoneNoTb.Text = CUserDGV.SelectedRows[0].Cells[3].Value.ToString();
-
-            if (UNameTB.Text == "")
-            {
-                key = 0;
-            }
-            else
-            {
-                key = Convert.ToInt32(CUserDGV.SelectedRows[0].Cells[0].Value.ToString());
-            }
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-            UserM obj = new UserM();
-            obj.Show();
-            this.Hide();
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-            MUserM obj = new MUserM();
             obj.Show();
             this.Hide();
         }
@@ -266,3 +258,4 @@ namespace RTC
         }
     }
 }
+

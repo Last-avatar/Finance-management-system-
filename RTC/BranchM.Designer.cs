@@ -70,6 +70,7 @@
             // 
             // BranchDGV
             // 
+            this.BranchDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.BranchDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.BranchDGV.Location = new System.Drawing.Point(336, 323);
             this.BranchDGV.Name = "BranchDGV";
@@ -304,7 +305,7 @@
             // 
             this.panel5.Controls.Add(this.pictureBox5);
             this.panel5.Controls.Add(this.label4);
-            this.panel5.Location = new System.Drawing.Point(2, 711);
+            this.panel5.Location = new System.Drawing.Point(3, 714);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(304, 54);
             this.panel5.TabIndex = 6;
