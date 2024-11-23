@@ -31,6 +31,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.CUserDGV = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.UphoneNoTb = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.DeleteBt = new System.Windows.Forms.Button();
             this.SaveBt = new System.Windows.Forms.Button();
             this.EditTb = new System.Windows.Forms.Button();
@@ -38,8 +40,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.UNameTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.UphoneNoTb = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -132,6 +132,25 @@
             this.panel6.Size = new System.Drawing.Size(999, 180);
             this.panel6.TabIndex = 2;
             // 
+            // UphoneNoTb
+            // 
+            this.UphoneNoTb.Location = new System.Drawing.Point(625, 64);
+            this.UphoneNoTb.Multiline = true;
+            this.UphoneNoTb.Name = "UphoneNoTb";
+            this.UphoneNoTb.Size = new System.Drawing.Size(202, 30);
+            this.UphoneNoTb.TabIndex = 10;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label7.Location = new System.Drawing.Point(662, 27);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(116, 26);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Phone No :";
+            // 
             // DeleteBt
             // 
             this.DeleteBt.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -206,25 +225,6 @@
             this.label2.Size = new System.Drawing.Size(117, 26);
             this.label2.TabIndex = 0;
             this.label2.Text = "Username :";
-            // 
-            // UphoneNoTb
-            // 
-            this.UphoneNoTb.Location = new System.Drawing.Point(625, 64);
-            this.UphoneNoTb.Multiline = true;
-            this.UphoneNoTb.Name = "UphoneNoTb";
-            this.UphoneNoTb.Size = new System.Drawing.Size(202, 30);
-            this.UphoneNoTb.TabIndex = 10;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label7.Location = new System.Drawing.Point(662, 27);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 26);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Phone No :";
             // 
             // panel3
             // 
@@ -400,7 +400,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(91, 5);
+            this.label10.Location = new System.Drawing.Point(93, 6);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(90, 25);
             this.label10.TabIndex = 5;

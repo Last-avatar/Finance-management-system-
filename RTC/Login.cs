@@ -38,5 +38,55 @@ namespace RTC
         {
 
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedUserType = UserTypeCB.SelectedItem.ToString();
+
+            switch (selectedUserType)
+            {
+                case "Cashier":
+                    CashierLogin cashierLogin = new CashierLogin();
+                    cashierLogin.Show();
+                    this.Hide();
+                    break;
+
+                case "Manager":
+                    MLogin mLogin = new MLogin();
+                    mLogin.Show();
+                    this.Hide();
+                    break;
+                case "Saving Excecutive":
+                    SELogin seLogin = new SELogin();
+                    seLogin.Show();
+                    this.Hide();
+                    break;
+                case "Loan Excecutive":
+                    LELogin leLogin = new LELogin();
+                    leLogin.Show();
+                    this.Hide();
+                    break;
+                case "DGM":
+                    DGMLogin dgmLogin = new DGMLogin();
+                    dgmLogin.Show();
+                    this.Hide();
+                    break;
+                case "CFO":
+                    CFOLogin cfoLogin = new CFOLogin();
+                    cfoLogin.Show();
+                    this.Hide();
+                    break;
+                case "CEO":
+                    CEOLogin ceoLogin = new CEOLogin();
+                    ceoLogin.Show();
+                    this.Hide();
+                    break;
+
+                default:
+                    MessageBox.Show("Please select a valid user type.");
+                    break;
+            }
+
+        }
     }
 }
