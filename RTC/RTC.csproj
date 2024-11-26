@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AAccount.Designer.cs">
+      <DependentUpon>AAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,12 @@
     <Compile Include="CDashbord.Designer.cs">
       <DependentUpon>CDashbord.cs</DependentUpon>
     </Compile>
+    <Compile Include="CEODashbord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CEODashbord.Designer.cs">
+      <DependentUpon>CEODashbord.cs</DependentUpon>
+    </Compile>
     <Compile Include="CEOLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +99,12 @@
     </Compile>
     <Compile Include="CEOUserM.Designer.cs">
       <DependentUpon>CEOUserM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFODashbord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CFODashbord.Designer.cs">
+      <DependentUpon>CFODashbord.cs</DependentUpon>
     </Compile>
     <Compile Include="CFOLogin.cs">
       <SubType>Form</SubType>
@@ -100,6 +118,12 @@
     <Compile Include="CFOUserM.Designer.cs">
       <DependentUpon>CFOUserM.cs</DependentUpon>
     </Compile>
+    <Compile Include="DDashbord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DDashbord.Designer.cs">
+      <DependentUpon>DDashbord.cs</DependentUpon>
+    </Compile>
     <Compile Include="DGMLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +135,12 @@
     </Compile>
     <Compile Include="DGMUserM.Designer.cs">
       <DependentUpon>DGMUserM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LEDashbord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LEDashbord.Designer.cs">
+      <DependentUpon>LEDashbord.cs</DependentUpon>
     </Compile>
     <Compile Include="LELogin.cs">
       <SubType>Form</SubType>
@@ -150,6 +180,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SEDashbord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEDashbord.Designer.cs">
+      <DependentUpon>SEDashbord.cs</DependentUpon>
+    </Compile>
     <Compile Include="SELogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,12 +198,21 @@
     <Compile Include="SEUserM.Designer.cs">
       <DependentUpon>SEUserM.cs</DependentUpon>
     </Compile>
+    <Compile Include="SIAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SIAccount.Designer.cs">
+      <DependentUpon>SIAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserM.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserM.Designer.cs">
       <DependentUpon>UserM.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AAccount.resx">
+      <DependentUpon>AAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin Login.resx">
       <DependentUpon>Admin Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SEUserM.resx">
       <DependentUpon>SEUserM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIAccount.resx">
+      <DependentUpon>SIAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserM.resx">
       <DependentUpon>UserM.cs</DependentUpon>
@@ -307,6 +355,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\building-house-regular-24 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cog-regular-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-account-solid-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-blank-regular-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report-solid-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

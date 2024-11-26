@@ -31,13 +31,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.LoginBt = new System.Windows.Forms.Button();
-            this.PasswordTB = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.UsernameTB = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PasswordTB = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -56,8 +56,8 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.LoginBt);
             this.panel2.Controls.Add(this.PasswordTB);
+            this.panel2.Controls.Add(this.LoginBt);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
@@ -79,15 +79,7 @@
             this.LoginBt.TabIndex = 8;
             this.LoginBt.Text = "Login";
             this.LoginBt.UseVisualStyleBackColor = false;
-            // 
-            // PasswordTB
-            // 
-            this.PasswordTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordTB.Location = new System.Drawing.Point(59, 334);
-            this.PasswordTB.Multiline = true;
-            this.PasswordTB.Name = "PasswordTB";
-            this.PasswordTB.Size = new System.Drawing.Size(216, 31);
-            this.PasswordTB.TabIndex = 7;
+            this.LoginBt.Click += new System.EventHandler(this.LoginBt_Click);
             // 
             // label3
             // 
@@ -153,6 +145,16 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // PasswordTB
+            // 
+            this.PasswordTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTB.Location = new System.Drawing.Point(59, 334);
+            this.PasswordTB.Multiline = true;
+            this.PasswordTB.Name = "PasswordTB";
+            this.PasswordTB.PasswordChar = '*';
+            this.PasswordTB.Size = new System.Drawing.Size(216, 31);
+            this.PasswordTB.TabIndex = 9;
+            // 
             // DGMLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -176,12 +178,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button LoginBt;
-        private System.Windows.Forms.TextBox PasswordTB;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox UsernameTB;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox PasswordTB;
     }
 }

@@ -69,9 +69,9 @@
             this.PasswordTb.Location = new System.Drawing.Point(83, 284);
             this.PasswordTb.Multiline = true;
             this.PasswordTb.Name = "PasswordTb";
+            this.PasswordTb.PasswordChar = '*';
             this.PasswordTb.Size = new System.Drawing.Size(231, 38);
             this.PasswordTb.TabIndex = 7;
-            this.PasswordTb.UseSystemPasswordChar = true;
             this.PasswordTb.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3

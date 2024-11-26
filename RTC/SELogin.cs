@@ -30,12 +30,12 @@ namespace RTC
                 try
                 {
                     con.Open();
-                    SqlDataAdapter sda = new SqlDataAdapter("select count(*)from LExcecutiveTB where LEName = '" + UsernameTB.Text + "' and LEPassword = '" + PasswordTB.Text + "'", con);
+                    SqlDataAdapter sda = new SqlDataAdapter("select count(*)from SExcecutiveTB where SEName = '" + UsernameTB.Text + "' and SEPassword = '" + PasswordTB.Text + "'", con);
                     DataTable dt = new DataTable();
                     sda.Fill(dt);
                     if (dt.Rows[0][0].ToString() == "1")
                     {
-                        MDashbord obj = new MDashbord();
+                        SEDashbord obj = new SEDashbord();
                         obj.Show();
                         this.Hide();
                         con.Close();
@@ -51,6 +51,11 @@ namespace RTC
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

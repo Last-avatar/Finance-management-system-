@@ -220,5 +220,15 @@ namespace RTC
         {
             DeleteBranch();
         }
+
+        private void BAddressTb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BranchDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

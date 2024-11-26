@@ -78,6 +78,7 @@
             this.BranchDGV.RowTemplate.Height = 24;
             this.BranchDGV.Size = new System.Drawing.Size(1102, 436);
             this.BranchDGV.TabIndex = 3;
+            this.BranchDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BranchDGV_CellContentClick);
             this.BranchDGV.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.BranchDGV_CellMouseClick);
             this.BranchDGV.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.BranchDGV_RowHeaderMouseClick);
             // 
@@ -85,7 +86,7 @@
             // 
             this.SaveBt.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveBt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.SaveBt.Location = new System.Drawing.Point(356, 121);
+            this.SaveBt.Location = new System.Drawing.Point(356, 144);
             this.SaveBt.Name = "SaveBt";
             this.SaveBt.Size = new System.Drawing.Size(117, 36);
             this.SaveBt.TabIndex = 7;
@@ -97,7 +98,7 @@
             // 
             this.EditBt.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditBt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.EditBt.Location = new System.Drawing.Point(164, 121);
+            this.EditBt.Location = new System.Drawing.Point(164, 144);
             this.EditBt.Name = "EditBt";
             this.EditBt.Size = new System.Drawing.Size(117, 36);
             this.EditBt.TabIndex = 6;
@@ -107,18 +108,19 @@
             // 
             // BAddressTb
             // 
-            this.BAddressTb.Location = new System.Drawing.Point(477, 58);
+            this.BAddressTb.Location = new System.Drawing.Point(423, 60);
             this.BAddressTb.Multiline = true;
             this.BAddressTb.Name = "BAddressTb";
-            this.BAddressTb.Size = new System.Drawing.Size(202, 30);
+            this.BAddressTb.Size = new System.Drawing.Size(321, 57);
             this.BAddressTb.TabIndex = 5;
+            this.BAddressTb.TextChanged += new System.EventHandler(this.BAddressTb_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label8.Location = new System.Drawing.Point(526, 21);
+            this.label8.Location = new System.Drawing.Point(427, 21);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(98, 26);
             this.label8.TabIndex = 4;
@@ -127,7 +129,7 @@
             // 
             // BnameTB
             // 
-            this.BnameTB.Location = new System.Drawing.Point(153, 58);
+            this.BnameTB.Location = new System.Drawing.Point(154, 70);
             this.BnameTB.Multiline = true;
             this.BnameTB.Name = "BnameTB";
             this.BnameTB.Size = new System.Drawing.Size(202, 30);
@@ -138,7 +140,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(174, 21);
+            this.label2.Location = new System.Drawing.Point(159, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(151, 26);
             this.label2.TabIndex = 0;
@@ -155,9 +157,9 @@
             this.panel6.Controls.Add(this.label8);
             this.panel6.Controls.Add(this.BnameTB);
             this.panel6.Controls.Add(this.label2);
-            this.panel6.Location = new System.Drawing.Point(491, 114);
+            this.panel6.Location = new System.Drawing.Point(491, 101);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(809, 180);
+            this.panel6.Size = new System.Drawing.Size(809, 199);
             this.panel6.TabIndex = 2;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
@@ -165,7 +167,7 @@
             // 
             this.DeleteBt.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteBt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.DeleteBt.Location = new System.Drawing.Point(544, 121);
+            this.DeleteBt.Location = new System.Drawing.Point(544, 144);
             this.DeleteBt.Name = "DeleteBt";
             this.DeleteBt.Size = new System.Drawing.Size(117, 36);
             this.DeleteBt.TabIndex = 8;

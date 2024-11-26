@@ -103,6 +103,16 @@ namespace RTC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cog_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("cog-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dashboard_solid_24 {
             get {
                 object obj = ResourceManager.GetObject("dashboard-solid-24", resourceCulture);
@@ -123,6 +133,16 @@ namespace RTC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap file_blank_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("file-blank-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap log_out_regular_24 {
             get {
                 object obj = ResourceManager.GetObject("log-out-regular-24", resourceCulture);
@@ -136,6 +156,16 @@ namespace RTC.Properties {
         internal static System.Drawing.Bitmap log_out_regular_24__1_ {
             get {
                 object obj = ResourceManager.GetObject("log-out-regular-24 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap report_solid_24 {
+            get {
+                object obj = ResourceManager.GetObject("report-solid-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,6 +266,16 @@ namespace RTC.Properties {
         internal static System.Drawing.Bitmap Screenshot_2024_11_17_1458552 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2024-11-17 1458552", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_account_solid_24 {
+            get {
+                object obj = ResourceManager.GetObject("user-account-solid-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
