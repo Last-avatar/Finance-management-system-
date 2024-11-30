@@ -17,6 +17,7 @@ namespace RTC
         {
             InitializeComponent();
             populate();
+            panelCP.Hide(); 
 
         }
         public String conString = "Data Source=CHETHANA;Initial Catalog=RTC;Integrated Security=True;";
@@ -54,7 +55,7 @@ namespace RTC
                 {
                     con.Open();
 
-                    SqlCommand cmd = new SqlCommand("update FDAccountTB set HName = @PHN,GName =@PGN,NIC = @PNc,Contact_no = @PCn,Address = @PA,Email = @PE,Date = @PD,DBO =@PDob ,Gender = @PG,BC_No = PBn  where PID = @Pkey", con);
+                    SqlCommand cmd = new SqlCommand("update PoddoAccountTB set HName = @PHN,GName =@PGN,NIC = @PN,Contact_no = @PCn,Address = @PA,Email = @PE,Date = @PD,DBO =@PDob ,Gender = @PG,BC_No = PBn  where PID = @Pkey", con);
                     cmd.Parameters.AddWithValue("@PHN", PNameTB.Text);
                     cmd.Parameters.AddWithValue("@PGN", GNameTB.Text);
                     cmd.Parameters.AddWithValue("@PN", NICNoTb.Text);
@@ -244,6 +245,47 @@ namespace RTC
             {
                 key = Convert.ToInt32(PDGV.SelectedRows[0].Cells[0].Value.ToString());
             }
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            SIAccount obj = new SIAccount();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+            SIDAccount obj = new SIDAccount();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+            SIGAccount obj = new SIGAccount();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            MAccount obj = new MAccount();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            panelCP.Show();
+        }
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+            CSettings obj = new CSettings();
+            obj.Show();
+            this.Hide();
         }
     }
 }

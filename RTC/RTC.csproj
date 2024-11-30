@@ -82,6 +82,18 @@
     <Compile Include="CDashbord.Designer.cs">
       <DependentUpon>CDashbord.cs</DependentUpon>
     </Compile>
+    <Compile Include="CDGAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CDGAccount.Designer.cs">
+      <DependentUpon>CDGAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CDIAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CDIAccount.Designer.cs">
+      <DependentUpon>CDIAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="CEODashbord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +129,36 @@
     </Compile>
     <Compile Include="CFOUserM.Designer.cs">
       <DependentUpon>CFOUserM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CSettings.Designer.cs">
+      <DependentUpon>CSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CWDAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CWDAccount.Designer.cs">
+      <DependentUpon>CWDAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CWGAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CWGAccount.Designer.cs">
+      <DependentUpon>CWGAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CWIAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CWIAccount.Designer.cs">
+      <DependentUpon>CWIAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CWPAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CWPAccount.Designer.cs">
+      <DependentUpon>CWPAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="DDashbord.cs">
       <SubType>Form</SubType>
@@ -160,11 +202,23 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="MAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAccount.Designer.cs">
+      <DependentUpon>MAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDashbord.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MDashbord.Designer.cs">
       <DependentUpon>MDashbord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CDDAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CDDAccount.Designer.cs">
+      <DependentUpon>CDDAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="MLogin.cs">
       <SubType>Form</SubType>
@@ -204,6 +258,18 @@
     <Compile Include="SIAccount.Designer.cs">
       <DependentUpon>SIAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="SIDAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SIDAccount.Designer.cs">
+      <DependentUpon>SIDAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SIGAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SIGAccount.Designer.cs">
+      <DependentUpon>SIGAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,6 +294,12 @@
     <EmbeddedResource Include="CDashbord.resx">
       <DependentUpon>CDashbord.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CDGAccount.resx">
+      <DependentUpon>CDGAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CDIAccount.resx">
+      <DependentUpon>CDIAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CEOLogin.resx">
       <DependentUpon>CEOLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,6 +311,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CFOUserM.resx">
       <DependentUpon>CFOUserM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CSettings.resx">
+      <DependentUpon>CSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CWDAccount.resx">
+      <DependentUpon>CWDAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CWGAccount.resx">
+      <DependentUpon>CWGAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CWIAccount.resx">
+      <DependentUpon>CWIAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CWPAccount.resx">
+      <DependentUpon>CWPAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DGMLogin.resx">
       <DependentUpon>DGMLogin.cs</DependentUpon>
@@ -254,6 +341,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAccount.resx">
+      <DependentUpon>MAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CDDAccount.resx">
+      <DependentUpon>CDDAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MLogin.resx">
       <DependentUpon>MLogin.cs</DependentUpon>
@@ -279,6 +372,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SIAccount.resx">
       <DependentUpon>SIAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIDAccount.resx">
+      <DependentUpon>SIDAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIGAccount.resx">
+      <DependentUpon>SIGAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserM.resx">
       <DependentUpon>UserM.cs</DependentUpon>
@@ -367,6 +466,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\report-solid-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-account-solid-24 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-solid-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

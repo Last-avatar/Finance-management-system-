@@ -8,17 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.AxHost;
 
 namespace RTC
 {
-    public partial class AAccount : Form
+    public partial class SIGAccount : Form
     {
-        public AAccount()
+        public SIGAccount()
         {
             InitializeComponent();
             populate();
             panelCP.Hide();
+
         }
         public String conString = "Data Source=CHETHANA;Initial Catalog=RTC;Integrated Security=True;";
         private void populate()
@@ -28,12 +28,12 @@ namespace RTC
 
                 SqlConnection con = new SqlConnection(conString);
                 con.Open();
-                String Query = "select * from FDAccountTB";
+                String Query = "select * from GarusaruAccountTB";
                 SqlDataAdapter sda = new SqlDataAdapter(Query, con);
                 SqlCommandBuilder builder = new SqlCommandBuilder(sda);
                 var ds = new DataSet();
                 sda.Fill(ds);
-                FDDGV.DataSource = ds.Tables[0];
+                GADGV.DataSource = ds.Tables[0];
                 con.Close();
             }
             catch (Exception ex)
@@ -45,7 +45,7 @@ namespace RTC
         {
             SqlConnection con = new SqlConnection(conString);
 
-            if (FDNameTB.Text == "" || AddressTb.Text == "" || NICNoTb.Text == "" || ContactNoTb.Text == "" || EmailTb.Text == "" || CStatusCB.SelectedIndex == -1)
+            if (NameTB.Text == "" || NICNoTb.Text == "" || ContactNoTb.Text == "" || GenderTB.SelectedIndex == -1 || AddressTb.Text == "" || EmailTb.Text == "")
             {
                 MessageBox.Show("Missing Information!!!");
             }
@@ -55,22 +55,22 @@ namespace RTC
                 {
                     con.Open();
 
-                    SqlCommand cmd = new SqlCommand("update FDAccountTB set Name = @FDN, Address = @FDA, NIC = @FDNc, Contact_no = @FDC,Date = @FDD,Email = @FDE,Civil_status = @FDCS  where FDID = @FDkey", con);
-                    cmd.Parameters.AddWithValue("@FDN", FDNameTB.Text);
-                    cmd.Parameters.AddWithValue("@FDA", AddressTb.Text);
-                    cmd.Parameters.AddWithValue("@FDNc", NICNoTb.Text);
-                    cmd.Parameters.AddWithValue("@FDC", ContactNoTb.Text);
-                    cmd.Parameters.AddWithValue("@FDD", dateTB.Value.Date);
-                    cmd.Parameters.AddWithValue("@FDE", EmailTb.Text);
-                    cmd.Parameters.AddWithValue("@FDCS", CStatusCB.SelectedItem.ToString());
-
+                    SqlCommand cmd = new SqlCommand("update GarusaruAccountTB set Name = @GN,NIC = @GNc,Contact_No = @GCn,Gender = @GG, Address = @GA,Email = @GE,Date = @GD where GID = @Gkey", con);
+                    cmd.Parameters.AddWithValue("@GN", NameTB.Text);
+                    cmd.Parameters.AddWithValue("@GNc", NICNoTb.Text);
+                    cmd.Parameters.AddWithValue("@GCn", ContactNoTb.Text);
+                    cmd.Parameters.AddWithValue("@GG", GenderTB.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@GA", AddressTb.Text);
+                    cmd.Parameters.AddWithValue("@GE", EmailTb.Text);
+                    cmd.Parameters.AddWithValue("@GD", dateTB.Value.Date);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Account Updated!!!");
-                    FDNameTB.Clear();
-                    AddressTb.Clear();
+                    NameTB.Clear();
                     NICNoTb.Clear();
                     ContactNoTb.Clear();
+                    AddressTb.Clear();
                     EmailTb.Clear();
+
                 }
                 catch (Exception Ex)
                 {
@@ -96,16 +96,16 @@ namespace RTC
                 try
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("delete from FDAccountTB where FDID = @FDkey", con);
-                    cmd.Parameters.AddWithValue("@FDkey", key);
+                    SqlCommand cmd = new SqlCommand("delete from  GarusaruAccountTB where GID = @Gkey", con);
+                    cmd.Parameters.AddWithValue("@Gkey", key);
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Account Deleted!!!");
                     con.Close();
-                    FDNameTB.Clear();
-                    AddressTb.Clear();
+                    NameTB.Clear();
                     NICNoTb.Clear();
                     ContactNoTb.Clear();
+                    AddressTb.Clear();
                     EmailTb.Clear();
                     populate();
                 }
@@ -125,7 +125,7 @@ namespace RTC
         {
             SqlConnection con = new SqlConnection(conString);
 
-            if (FDNameTB.Text == "" || AddressTb.Text == "" || NICNoTb.Text == "" || ContactNoTb.Text == "" || EmailTb.Text == "" || CStatusCB.SelectedIndex == -1)
+            if (NameTB.Text == "" || NICNoTb.Text == "" || ContactNoTb.Text == "" || GenderTB.SelectedIndex == -1 || AddressTb.Text == "" || EmailTb.Text == "")
             {
                 MessageBox.Show("Missing Information!!!");
             }
@@ -135,20 +135,20 @@ namespace RTC
                 try
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into FDAccountTB (Name,Address,NIC,Contact_no,Date,Email,Civil_status) values(@FDN,@FDA,@FDNc,@FDC,@FDD,@FDE,@FDCS)", con);
-                    cmd.Parameters.AddWithValue("@FDN", FDNameTB.Text);
-                    cmd.Parameters.AddWithValue("@FDA", AddressTb.Text);
-                    cmd.Parameters.AddWithValue("@FDNc", NICNoTb.Text);
-                    cmd.Parameters.AddWithValue("@FDC", ContactNoTb.Text);
-                    cmd.Parameters.AddWithValue("@FDD", dateTB.Value.Date);
-                    cmd.Parameters.AddWithValue("@FDE", EmailTb.Text);
-                    cmd.Parameters.AddWithValue("@FDCS",CStatusCB.SelectedItem.ToString());
+                    SqlCommand cmd = new SqlCommand("insert into  GarusaruAccountTB (Name,NIC,Contact_No,Gender,Address,Email,Date) values(@GN,@GNc,@GCn,@GG,@GA,@GE,@GD)", con);
+                    cmd.Parameters.AddWithValue("@GN", NameTB.Text);
+                    cmd.Parameters.AddWithValue("@GNc", NICNoTb.Text);
+                    cmd.Parameters.AddWithValue("@GCn", ContactNoTb.Text);
+                    cmd.Parameters.AddWithValue("@GG", GenderTB.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@GA", AddressTb.Text);
+                    cmd.Parameters.AddWithValue("@GE", EmailTb.Text);
+                    cmd.Parameters.AddWithValue("@GD", dateTB.Value.Date);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Account Create Successfully!");
-                    FDNameTB.Clear();
-                    AddressTb.Clear();
+                    NameTB.Clear();
                     NICNoTb.Clear();
                     ContactNoTb.Clear();
+                    AddressTb.Clear();
                     EmailTb.Clear();
                     con.Close();
                     populate();
@@ -162,17 +162,8 @@ namespace RTC
 
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
+        private void SIGAccount_Load(object sender, EventArgs e)
         {
 
         }
@@ -192,29 +183,29 @@ namespace RTC
             EditAccount();
         }
 
-        private void FDDGV_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void DADGV_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            FDNameTB.Text = FDDGV.SelectedRows[0].Cells[1].Value.ToString();
-            AddressTb.Text = FDDGV.SelectedRows[0].Cells[2].Value.ToString();
-            NICNoTb.Text = FDDGV.SelectedRows[0].Cells[3].Value.ToString();
-            ContactNoTb.Text = FDDGV.SelectedRows[0].Cells[4].Value.ToString();
-            dateTB.Text = FDDGV.SelectedRows[0].Cells[5].Value.ToString();
-            EmailTb.Text = FDDGV.SelectedRows[0].Cells[6].Value.ToString();
-            CStatusCB.Text = FDDGV.SelectedRows[0].Cells[7].Value.ToString();
+            NameTB.Text = GADGV.SelectedRows[0].Cells[1].Value.ToString();
+            NICNoTb.Text = GADGV.SelectedRows[0].Cells[2].Value.ToString();
+            ContactNoTb.Text = GADGV.SelectedRows[0].Cells[3].Value.ToString();
+            GenderTB.Text = GADGV.SelectedRows[0].Cells[4].Value.ToString();
+            AddressTb.Text = GADGV.SelectedRows[0].Cells[5].Value.ToString();
+            EmailTb.Text = GADGV.SelectedRows[0].Cells[6].Value.ToString();
+            dateTB.Text = GADGV.SelectedRows[0].Cells[7].Value.ToString();
 
-            if (FDNameTB.Text == "")
+            if (NameTB.Text == "")
             {
                 key = 0;
             }
             else
             {
-                key = Convert.ToInt32(FDDGV.SelectedRows[0].Cells[0].Value.ToString());
+                key = Convert.ToInt32(GADGV.SelectedRows[0].Cells[0].Value.ToString());
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
-            CDashbord obj = new CDashbord();
+            Login obj = new Login();
             obj.Show();
             this.Hide();
         }
@@ -240,9 +231,30 @@ namespace RTC
             this.Hide();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            Login obj = new Login();
+            CDashbord obj = new CDashbord();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            SIAccount obj = new SIAccount();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+            SIDAccount obj = new SIDAccount();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+            SIGAccount obj = new SIGAccount();
             obj.Show();
             this.Hide();
         }
@@ -256,10 +268,10 @@ namespace RTC
 
         private void label2_Click(object sender, EventArgs e)
         {
-            panelCP.Show();
+            panelCP.Show(); 
         }
 
-        private void label20_Click(object sender, EventArgs e)
+        private void label26_Click(object sender, EventArgs e)
         {
             CSettings obj = new CSettings();
             obj.Show();

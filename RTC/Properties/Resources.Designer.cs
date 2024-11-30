@@ -143,6 +143,16 @@ namespace RTC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap home_solid_24 {
+            get {
+                object obj = ResourceManager.GetObject("home-solid-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap log_out_regular_24 {
             get {
                 object obj = ResourceManager.GetObject("log-out-regular-24", resourceCulture);
@@ -276,6 +286,16 @@ namespace RTC.Properties {
         internal static System.Drawing.Bitmap user_account_solid_24 {
             get {
                 object obj = ResourceManager.GetObject("user-account-solid-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_account_solid_24__2_ {
+            get {
+                object obj = ResourceManager.GetObject("user-account-solid-24 (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
