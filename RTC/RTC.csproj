@@ -33,8 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,11 +70,65 @@
     <Compile Include="ADashbord.Designer.cs">
       <DependentUpon>ADashbord.cs</DependentUpon>
     </Compile>
+    <Compile Include="BDSReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDSReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BDStatement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BDStatement.Designer.cs">
+      <DependentUpon>BDStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BDStatementReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BDStatementReport.Designer.cs">
+      <DependentUpon>BDStatementReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BGSReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BGSReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BGStatement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BGStatement.Designer.cs">
+      <DependentUpon>BGStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BGStatementReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BGStatementReport.Designer.cs">
+      <DependentUpon>BGStatementReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="BranchM.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BranchM.Designer.cs">
       <DependentUpon>BranchM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BSReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BSReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BStatement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BStatement.Designer.cs">
+      <DependentUpon>BStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BStatementReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BStatementReport.Designer.cs">
+      <DependentUpon>BStatementReport.cs</DependentUpon>
     </Compile>
     <Compile Include="CashierLogin.cs">
       <SubType>Form</SubType>
@@ -160,11 +220,59 @@
     <Compile Include="CWPAccount.Designer.cs">
       <DependentUpon>CWPAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="DCCrystal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DCCrystal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DCollections.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DCollections.Designer.cs">
+      <DependentUpon>DCollections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DCReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DCReports.Designer.cs">
+      <DependentUpon>DCReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="DDashbord.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DDashbord.Designer.cs">
       <DependentUpon>DDashbord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DDCrystal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DDCrystal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DDReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DDReports.Designer.cs">
+      <DependentUpon>DDReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DECReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DECReport.Designer.cs">
+      <DependentUpon>DECReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DECrystal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DECrystal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DEReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DEReports.Designer.cs">
+      <DependentUpon>DEReports.cs</DependentUpon>
     </Compile>
     <Compile Include="DGMLogin.cs">
       <SubType>Form</SubType>
@@ -177,6 +285,66 @@
     </Compile>
     <Compile Include="DGMUserM.Designer.cs">
       <DependentUpon>DGMUserM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPCReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPCReport.Designer.cs">
+      <DependentUpon>FPCReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPCrystal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FPCrystal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FPReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPReport.Designer.cs">
+      <DependentUpon>FPReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCCrystal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GCCrystal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GCollections.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCollections.Designer.cs">
+      <DependentUpon>GCollections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GCReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GCReports.Designer.cs">
+      <DependentUpon>GCReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GDCrystal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GDCrystal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GDReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GDReports.Designer.cs">
+      <DependentUpon>GDReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ILoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ILoan.Designer.cs">
+      <DependentUpon>ILoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IssueLoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IssueLoan.Designer.cs">
+      <DependentUpon>IssueLoan.cs</DependentUpon>
     </Compile>
     <Compile Include="LEDashbord.cs">
       <SubType>Form</SubType>
@@ -220,17 +388,113 @@
     <Compile Include="CDDAccount.Designer.cs">
       <DependentUpon>CDDAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDDocument.Designer.cs">
+      <DependentUpon>MDDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MGDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MGDocument.Designer.cs">
+      <DependentUpon>MGDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MIDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MIDocument.Designer.cs">
+      <DependentUpon>MIDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MLDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MLDocument.Designer.cs">
+      <DependentUpon>MLDocument.cs</DependentUpon>
+    </Compile>
     <Compile Include="MLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MLogin.Designer.cs">
       <DependentUpon>MLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="MLRequests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MLRequests.Designer.cs">
+      <DependentUpon>MLRequests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNDAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNDAccounts.Designer.cs">
+      <DependentUpon>MNDAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNGAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNGAccounts.Designer.cs">
+      <DependentUpon>MNGAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNIAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNIAccounts.Designer.cs">
+      <DependentUpon>MNIAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MNPAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MNPAccounts.Designer.cs">
+      <DependentUpon>MNPAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MPDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MPDocument.Designer.cs">
+      <DependentUpon>MPDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSettings.Designer.cs">
+      <DependentUpon>MSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="MUserM.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MUserM.Designer.cs">
       <DependentUpon>MUserM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCCrystal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PCCrystal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PCollections.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCollections.Designer.cs">
+      <DependentUpon>PCollections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCReports.Designer.cs">
+      <DependentUpon>PCReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDCrystal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PDCrystal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PDReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PDReports.Designer.cs">
+      <DependentUpon>PDReports.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -245,6 +509,12 @@
     </Compile>
     <Compile Include="SELogin.Designer.cs">
       <DependentUpon>SELogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SESettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SESettings.Designer.cs">
+      <DependentUpon>SESettings.cs</DependentUpon>
     </Compile>
     <Compile Include="SEUserM.cs">
       <SubType>Form</SubType>
@@ -285,8 +555,38 @@
     <EmbeddedResource Include="ADashbord.resx">
       <DependentUpon>ADashbord.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BDSReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BDSReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BDStatement.resx">
+      <DependentUpon>BDStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BDStatementReport.resx">
+      <DependentUpon>BDStatementReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BGSReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BGSReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BGStatement.resx">
+      <DependentUpon>BGStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BGStatementReport.resx">
+      <DependentUpon>BGStatementReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BranchM.resx">
       <DependentUpon>BranchM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BSReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BSReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BStatement.resx">
+      <DependentUpon>BStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BStatementReport.resx">
+      <DependentUpon>BStatementReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CashierLogin.resx">
       <DependentUpon>CashierLogin.cs</DependentUpon>
@@ -327,11 +627,71 @@
     <EmbeddedResource Include="CWPAccount.resx">
       <DependentUpon>CWPAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DCCrystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DCCrystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DCollections.resx">
+      <DependentUpon>DCollections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DCReports.resx">
+      <DependentUpon>DCReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DDCrystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DDCrystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DDReports.resx">
+      <DependentUpon>DDReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DECReport.resx">
+      <DependentUpon>DECReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DECrystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DECrystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DEReports.resx">
+      <DependentUpon>DEReports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DGMLogin.resx">
       <DependentUpon>DGMLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DGMUserM.resx">
       <DependentUpon>DGMUserM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPCReport.resx">
+      <DependentUpon>FPCReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPCrystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FPCrystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPReport.resx">
+      <DependentUpon>FPReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCCrystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GCCrystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCollections.resx">
+      <DependentUpon>GCollections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCReports.resx">
+      <DependentUpon>GCReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GDCrystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GDCrystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GDReports.resx">
+      <DependentUpon>GDReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ILoan.resx">
+      <DependentUpon>ILoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IssueLoan.resx">
+      <DependentUpon>IssueLoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LELogin.resx">
       <DependentUpon>LELogin.cs</DependentUpon>
@@ -348,11 +708,64 @@
     <EmbeddedResource Include="CDDAccount.resx">
       <DependentUpon>CDDAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MDashbord.resx">
+      <DependentUpon>MDashbord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDDocument.resx">
+      <DependentUpon>MDDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MGDocument.resx">
+      <DependentUpon>MGDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MIDocument.resx">
+      <DependentUpon>MIDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MLDocument.resx">
+      <DependentUpon>MLDocument.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MLogin.resx">
       <DependentUpon>MLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MLRequests.resx">
+      <DependentUpon>MLRequests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNDAccounts.resx">
+      <DependentUpon>MNDAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNGAccounts.resx">
+      <DependentUpon>MNGAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNIAccounts.resx">
+      <DependentUpon>MNIAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MNPAccounts.resx">
+      <DependentUpon>MNPAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MPDocument.resx">
+      <DependentUpon>MPDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSettings.resx">
+      <DependentUpon>MSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MUserM.resx">
       <DependentUpon>MUserM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCCrystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PCCrystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCollections.resx">
+      <DependentUpon>PCollections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCReports.resx">
+      <DependentUpon>PCReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDCrystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PDCrystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDReports.resx">
+      <DependentUpon>PDReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -364,8 +777,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SEDashbord.resx">
+      <DependentUpon>SEDashbord.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SELogin.resx">
       <DependentUpon>SELogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SESettings.resx">
+      <DependentUpon>SESettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SEUserM.resx">
       <DependentUpon>SEUserM.cs</DependentUpon>
@@ -472,6 +891,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\home-solid-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bank-solid-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bank-solid-24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-solid-24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bank-solid-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-solid-24 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report-solid-24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-doc-solid-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-doc-solid-24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-doc-solid-241.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

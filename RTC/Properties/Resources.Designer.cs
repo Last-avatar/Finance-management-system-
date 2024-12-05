@@ -73,6 +73,36 @@ namespace RTC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bank_solid_24 {
+            get {
+                object obj = ResourceManager.GetObject("bank-solid-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bank_solid_24__1_ {
+            get {
+                object obj = ResourceManager.GetObject("bank-solid-24 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bank_solid_241 {
+            get {
+                object obj = ResourceManager.GetObject("bank-solid-241", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap building_house_regular_24 {
             get {
                 object obj = ResourceManager.GetObject("building-house-regular-24", resourceCulture);
@@ -143,9 +173,59 @@ namespace RTC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap file_doc_solid_24 {
+            get {
+                object obj = ResourceManager.GetObject("file-doc-solid-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap file_doc_solid_24__1_ {
+            get {
+                object obj = ResourceManager.GetObject("file-doc-solid-24 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap file_doc_solid_241 {
+            get {
+                object obj = ResourceManager.GetObject("file-doc-solid-241", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home_solid_24 {
             get {
                 object obj = ResourceManager.GetObject("home-solid-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap home_solid_24__1_ {
+            get {
+                object obj = ResourceManager.GetObject("home-solid-24 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap home_solid_24__4_ {
+            get {
+                object obj = ResourceManager.GetObject("home-solid-24 (4)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +256,16 @@ namespace RTC.Properties {
         internal static System.Drawing.Bitmap report_solid_24 {
             get {
                 object obj = ResourceManager.GetObject("report-solid-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap report_solid_24__1_ {
+            get {
+                object obj = ResourceManager.GetObject("report-solid-24 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

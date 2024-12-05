@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.FDDGV = new System.Windows.Forms.DataGridView();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.BalanceTB = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.WithdrawTB = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.CStatusCB = new System.Windows.Forms.ComboBox();
+            this.NICTB = new System.Windows.Forms.TextBox();
+            this.AccountNoTB = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.SaveBt = new System.Windows.Forms.Button();
+            this.WithdrawBt = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.dateTB = new System.Windows.Forms.DateTimePicker();
-            this.FDNameTB = new System.Windows.Forms.TextBox();
+            this.NameTB = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
+            this.FDWDGV = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -54,6 +54,8 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panelCP = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -79,16 +81,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelCP = new System.Windows.Forms.Panel();
-            this.label26 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FDDGV)).BeginInit();
             this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FDWDGV)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panelCP.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -103,13 +104,12 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelCP.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel10);
-            this.panel1.Controls.Add(this.FDDGV);
+            this.panel1.Controls.Add(this.FDWDGV);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -119,32 +119,21 @@
             this.panel1.Size = new System.Drawing.Size(1489, 845);
             this.panel1.TabIndex = 6;
             // 
-            // FDDGV
-            // 
-            this.FDDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.FDDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.FDDGV.Location = new System.Drawing.Point(337, 452);
-            this.FDDGV.Name = "FDDGV";
-            this.FDDGV.RowHeadersWidth = 51;
-            this.FDDGV.RowTemplate.Height = 24;
-            this.FDDGV.Size = new System.Drawing.Size(1120, 385);
-            this.FDDGV.TabIndex = 6;
-            // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.LightGray;
             this.panel10.Controls.Add(this.label17);
-            this.panel10.Controls.Add(this.textBox3);
+            this.panel10.Controls.Add(this.BalanceTB);
             this.panel10.Controls.Add(this.label21);
-            this.panel10.Controls.Add(this.textBox2);
+            this.panel10.Controls.Add(this.WithdrawTB);
             this.panel10.Controls.Add(this.label20);
-            this.panel10.Controls.Add(this.textBox1);
-            this.panel10.Controls.Add(this.CStatusCB);
+            this.panel10.Controls.Add(this.NICTB);
+            this.panel10.Controls.Add(this.AccountNoTB);
             this.panel10.Controls.Add(this.label19);
-            this.panel10.Controls.Add(this.SaveBt);
+            this.panel10.Controls.Add(this.WithdrawBt);
             this.panel10.Controls.Add(this.label18);
             this.panel10.Controls.Add(this.dateTB);
-            this.panel10.Controls.Add(this.FDNameTB);
+            this.panel10.Controls.Add(this.NameTB);
             this.panel10.Controls.Add(this.label23);
             this.panel10.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel10.Location = new System.Drawing.Point(441, 148);
@@ -163,14 +152,14 @@
             this.label17.TabIndex = 25;
             this.label17.Text = "NIC/Passport No :";
             // 
-            // textBox3
+            // BalanceTB
             // 
-            this.textBox3.Location = new System.Drawing.Point(380, 160);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(202, 30);
-            this.textBox3.TabIndex = 24;
+            this.BalanceTB.Location = new System.Drawing.Point(380, 160);
+            this.BalanceTB.Multiline = true;
+            this.BalanceTB.Name = "BalanceTB";
+            this.BalanceTB.ReadOnly = true;
+            this.BalanceTB.Size = new System.Drawing.Size(202, 30);
+            this.BalanceTB.TabIndex = 24;
             // 
             // label21
             // 
@@ -183,13 +172,13 @@
             this.label21.TabIndex = 23;
             this.label21.Text = "Account Balance :";
             // 
-            // textBox2
+            // WithdrawTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(671, 165);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(202, 30);
-            this.textBox2.TabIndex = 22;
+            this.WithdrawTB.Location = new System.Drawing.Point(671, 165);
+            this.WithdrawTB.Multiline = true;
+            this.WithdrawTB.Name = "WithdrawTB";
+            this.WithdrawTB.Size = new System.Drawing.Size(202, 30);
+            this.WithdrawTB.TabIndex = 22;
             // 
             // label20
             // 
@@ -202,22 +191,23 @@
             this.label20.TabIndex = 21;
             this.label20.Text = "Withdraw Amount :";
             // 
-            // textBox1
+            // NICTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(671, 59);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(202, 30);
-            this.textBox1.TabIndex = 20;
+            this.NICTB.Location = new System.Drawing.Point(671, 59);
+            this.NICTB.Multiline = true;
+            this.NICTB.Name = "NICTB";
+            this.NICTB.ReadOnly = true;
+            this.NICTB.Size = new System.Drawing.Size(202, 30);
+            this.NICTB.TabIndex = 20;
             // 
-            // CStatusCB
+            // AccountNoTB
             // 
-            this.CStatusCB.FormattingEnabled = true;
-            this.CStatusCB.Location = new System.Drawing.Point(109, 59);
-            this.CStatusCB.Name = "CStatusCB";
-            this.CStatusCB.Size = new System.Drawing.Size(202, 30);
-            this.CStatusCB.TabIndex = 18;
+            this.AccountNoTB.FormattingEnabled = true;
+            this.AccountNoTB.Location = new System.Drawing.Point(109, 59);
+            this.AccountNoTB.Name = "AccountNoTB";
+            this.AccountNoTB.Size = new System.Drawing.Size(202, 30);
+            this.AccountNoTB.TabIndex = 18;
+            this.AccountNoTB.SelectedIndexChanged += new System.EventHandler(this.AccountNoTB_SelectedIndexChanged);
             // 
             // label19
             // 
@@ -230,16 +220,17 @@
             this.label19.TabIndex = 17;
             this.label19.Text = "Account No :";
             // 
-            // SaveBt
+            // WithdrawBt
             // 
-            this.SaveBt.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveBt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.SaveBt.Location = new System.Drawing.Point(396, 226);
-            this.SaveBt.Name = "SaveBt";
-            this.SaveBt.Size = new System.Drawing.Size(147, 36);
-            this.SaveBt.TabIndex = 7;
-            this.SaveBt.Text = "Withdraw";
-            this.SaveBt.UseVisualStyleBackColor = true;
+            this.WithdrawBt.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WithdrawBt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.WithdrawBt.Location = new System.Drawing.Point(396, 226);
+            this.WithdrawBt.Name = "WithdrawBt";
+            this.WithdrawBt.Size = new System.Drawing.Size(147, 36);
+            this.WithdrawBt.TabIndex = 7;
+            this.WithdrawBt.Text = "Withdraw";
+            this.WithdrawBt.UseVisualStyleBackColor = true;
+            this.WithdrawBt.Click += new System.EventHandler(this.WithdrawBt_Click);
             // 
             // label18
             // 
@@ -261,14 +252,14 @@
             this.dateTB.Size = new System.Drawing.Size(158, 30);
             this.dateTB.TabIndex = 15;
             // 
-            // FDNameTB
+            // NameTB
             // 
-            this.FDNameTB.Location = new System.Drawing.Point(380, 59);
-            this.FDNameTB.Multiline = true;
-            this.FDNameTB.Name = "FDNameTB";
-            this.FDNameTB.ReadOnly = true;
-            this.FDNameTB.Size = new System.Drawing.Size(202, 30);
-            this.FDNameTB.TabIndex = 1;
+            this.NameTB.Location = new System.Drawing.Point(380, 59);
+            this.NameTB.Multiline = true;
+            this.NameTB.Name = "NameTB";
+            this.NameTB.ReadOnly = true;
+            this.NameTB.Size = new System.Drawing.Size(202, 30);
+            this.NameTB.TabIndex = 1;
             // 
             // label23
             // 
@@ -280,6 +271,17 @@
             this.label23.Size = new System.Drawing.Size(79, 26);
             this.label23.TabIndex = 0;
             this.label23.Text = "Name :";
+            // 
+            // FDWDGV
+            // 
+            this.FDWDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.FDWDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.FDWDGV.Location = new System.Drawing.Point(337, 452);
+            this.FDWDGV.Name = "FDWDGV";
+            this.FDWDGV.RowHeadersWidth = 51;
+            this.FDWDGV.RowTemplate.Height = 24;
+            this.FDWDGV.Size = new System.Drawing.Size(1120, 385);
+            this.FDWDGV.TabIndex = 6;
             // 
             // panel6
             // 
@@ -413,6 +415,28 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(310, 840);
             this.panel2.TabIndex = 0;
+            // 
+            // panelCP
+            // 
+            this.panelCP.BackColor = System.Drawing.Color.Transparent;
+            this.panelCP.Controls.Add(this.label26);
+            this.panelCP.Location = new System.Drawing.Point(65, 568);
+            this.panelCP.Name = "panelCP";
+            this.panelCP.Size = new System.Drawing.Size(200, 45);
+            this.panelCP.TabIndex = 27;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.Transparent;
+            this.label26.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.Transparent;
+            this.label26.Location = new System.Drawing.Point(25, 5);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(151, 23);
+            this.label26.TabIndex = 3;
+            this.label26.Text = "Change Password";
+            this.label26.Click += new System.EventHandler(this.label26_Click);
             // 
             // panel8
             // 
@@ -694,28 +718,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panelCP
-            // 
-            this.panelCP.BackColor = System.Drawing.Color.Transparent;
-            this.panelCP.Controls.Add(this.label26);
-            this.panelCP.Location = new System.Drawing.Point(65, 568);
-            this.panelCP.Name = "panelCP";
-            this.panelCP.Size = new System.Drawing.Size(200, 45);
-            this.panelCP.TabIndex = 27;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.Transparent;
-            this.label26.Location = new System.Drawing.Point(25, 5);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(151, 23);
-            this.label26.TabIndex = 3;
-            this.label26.Text = "Change Password";
-            this.label26.Click += new System.EventHandler(this.label26_Click);
-            // 
             // CWIAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -725,9 +727,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CWIAccount";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.FDDGV)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FDWDGV)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel9.ResumeLayout(false);
@@ -737,6 +739,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panelCP.ResumeLayout(false);
+            this.panelCP.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -755,8 +759,6 @@
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelCP.ResumeLayout(false);
-            this.panelCP.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -792,7 +794,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView FDDGV;
+        private System.Windows.Forms.DataGridView FDWDGV;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
@@ -802,17 +804,17 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox BalanceTB;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox WithdrawTB;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox CStatusCB;
+        private System.Windows.Forms.TextBox NICTB;
+        private System.Windows.Forms.ComboBox AccountNoTB;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Button SaveBt;
+        private System.Windows.Forms.Button WithdrawBt;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.DateTimePicker dateTB;
-        private System.Windows.Forms.TextBox FDNameTB;
+        private System.Windows.Forms.TextBox NameTB;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Panel panelCP;
         private System.Windows.Forms.Label label26;

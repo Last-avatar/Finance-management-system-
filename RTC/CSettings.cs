@@ -61,6 +61,9 @@ namespace RTC
             sqlcomm.ExecuteNonQuery();
             MessageBox.Show("Password Changed");
             con.Close();   
+            OPasswordTB.Clear();
+            NPasswordTb.Clear();
+            CPasswordTb.Clear();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
