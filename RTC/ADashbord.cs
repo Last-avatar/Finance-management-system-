@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace RTC
         {
             InitializeComponent();
         }
-
+        public String conString = "Data Source=CHETHANA;Initial Catalog=RTC;Integrated Security=True;";
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
@@ -56,6 +57,19 @@ namespace RTC
             Login obj = new Login();
             obj.Show();
             this.Hide();
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            String Query = "select * from AccountSummaryTB";
+            SqlDataAdapter sda = new SqlDataAdapter(Query, con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            DGMDGV.DataSource = ds.Tables[0];
+            con.Close();
         }
     }
 }

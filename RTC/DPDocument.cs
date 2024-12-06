@@ -11,20 +11,18 @@ using System.Windows.Forms;
 
 namespace RTC
 {
-    public partial class DDashbord : Form
+    public partial class DPDocument : Form
     {
-        public DDashbord()
+        public DPDocument()
         {
             InitializeComponent();
-            panel6.Hide();
         }
         public String conString = "Data Source=CHETHANA;Initial Catalog=RTC;Integrated Security=True;";
-
-        private void label12_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(conString);
             con.Open();
-            String Query = "select * from PoddoAccountTB";
+            String Query = "select * from PoddoDoumentTB";
             SqlDataAdapter sda = new SqlDataAdapter(Query, con);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
@@ -37,7 +35,7 @@ namespace RTC
         {
             SqlConnection con = new SqlConnection(conString);
             con.Open();
-            String Query = "select * from DivisaruAccountTB";
+            String Query = "select * from DivisaruDoumentTB";
             SqlDataAdapter sda = new SqlDataAdapter(Query, con);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
@@ -50,7 +48,7 @@ namespace RTC
         {
             SqlConnection con = new SqlConnection(conString);
             con.Open();
-            String Query = "select * from GarusaruAccountTB";
+            String Query = "select * from GarusaruDoumentTB";
             SqlDataAdapter sda = new SqlDataAdapter(Query, con);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
@@ -63,7 +61,7 @@ namespace RTC
         {
             SqlConnection con = new SqlConnection(conString);
             con.Open();
-            String Query = "select * from FDAccountTB";
+            String Query = "select * from FDDoumentTB";
             SqlDataAdapter sda = new SqlDataAdapter(Query, con);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
@@ -72,11 +70,11 @@ namespace RTC
             con.Close();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void label6_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(conString);
             con.Open();
-            String Query = "select * from LoanCollectionsTB";
+            String Query = "select * from LoanDoumentTB";
             SqlDataAdapter sda = new SqlDataAdapter(Query, con);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
@@ -85,34 +83,9 @@ namespace RTC
             con.Close();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void label13_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(conString);
-            con.Open();
-            String Query = "select * from LoanRequestsTB";
-            SqlDataAdapter sda = new SqlDataAdapter(Query, con);
-            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
-            var ds = new DataSet();
-            sda.Fill(ds);
-            DGMDGV.DataSource = ds.Tables[0];
-            con.Close();
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-            DPDocument obj = new DPDocument();
-            obj.Show();
-            this.Hide();
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-            panel6.Show();
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-            DSettings obj = new DSettings();
+            DDashbord obj = new DDashbord();
             obj.Show();
             this.Hide();
         }

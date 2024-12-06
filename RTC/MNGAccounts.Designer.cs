@@ -31,9 +31,9 @@
             this.NICTB = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -113,6 +113,19 @@
             this.panel6.Size = new System.Drawing.Size(209, 37);
             this.panel6.TabIndex = 35;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label15.Location = new System.Drawing.Point(8, 3);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(190, 26);
+            this.label15.TabIndex = 30;
+            this.label15.Text = "Garusaru Accounts";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -138,19 +151,6 @@
             this.label16.TabIndex = 31;
             this.label16.Text = " Investment Accounts";
             this.label16.Click += new System.EventHandler(this.label16_Click);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label15.Location = new System.Drawing.Point(8, 3);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(190, 26);
-            this.label15.TabIndex = 30;
-            this.label15.Text = "Garusaru Accounts";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // panel3
             // 
@@ -263,7 +263,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::RTC.Properties.Resources.bank_solid_24__1_;
+            this.pictureBox2.Image = global::RTC.Properties.Resources.user_account_solid_24__2_;
             this.pictureBox2.Location = new System.Drawing.Point(10, 9);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(51, 38);
@@ -279,9 +279,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label2.Location = new System.Drawing.Point(67, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 26);
+            this.label2.Size = new System.Drawing.Size(148, 26);
             this.label2.TabIndex = 32;
-            this.label2.Text = " Loan Requests";
+            this.label2.Text = "New Accounts";
             // 
             // panel2
             // 

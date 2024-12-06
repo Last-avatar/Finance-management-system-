@@ -166,6 +166,12 @@
     <Compile Include="CEOLogin.Designer.cs">
       <DependentUpon>CEOLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="CEOSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CEOSettings.Designer.cs">
+      <DependentUpon>CEOSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="CEOUserM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,12 @@
     </Compile>
     <Compile Include="CFOLogin.Designer.cs">
       <DependentUpon>CFOLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFOSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CFOSettings.Designer.cs">
+      <DependentUpon>CFOSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="CFOUserM.cs">
       <SubType>Form</SubType>
@@ -286,6 +298,18 @@
     <Compile Include="DGMUserM.Designer.cs">
       <DependentUpon>DGMUserM.cs</DependentUpon>
     </Compile>
+    <Compile Include="DPDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DPDocument.Designer.cs">
+      <DependentUpon>DPDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DSettings.Designer.cs">
+      <DependentUpon>DSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="FPCReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -334,6 +358,12 @@
     <Compile Include="GDReports.Designer.cs">
       <DependentUpon>GDReports.cs</DependentUpon>
     </Compile>
+    <Compile Include="HLoans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HLoans.Designer.cs">
+      <DependentUpon>HLoans.cs</DependentUpon>
+    </Compile>
     <Compile Include="ILoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -346,6 +376,24 @@
     <Compile Include="IssueLoan.Designer.cs">
       <DependentUpon>IssueLoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="LCCrystal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LCCrystal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LCollections.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LCollections.Designer.cs">
+      <DependentUpon>LCollections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LCReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LCReports.Designer.cs">
+      <DependentUpon>LCReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="LEDashbord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -357,6 +405,12 @@
     </Compile>
     <Compile Include="LELogin.Designer.cs">
       <DependentUpon>LELogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LESettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LESettings.Designer.cs">
+      <DependentUpon>LESettings.cs</DependentUpon>
     </Compile>
     <Compile Include="LEUserM.cs">
       <SubType>Form</SubType>
@@ -465,6 +519,12 @@
     </Compile>
     <Compile Include="MUserM.Designer.cs">
       <DependentUpon>MUserM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NInvestments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NInvestments.Designer.cs">
+      <DependentUpon>NInvestments.cs</DependentUpon>
     </Compile>
     <Compile Include="PCCrystal.cs">
       <AutoGen>True</AutoGen>
@@ -600,14 +660,26 @@
     <EmbeddedResource Include="CDIAccount.resx">
       <DependentUpon>CDIAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CEODashbord.resx">
+      <DependentUpon>CEODashbord.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CEOLogin.resx">
       <DependentUpon>CEOLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CEOSettings.resx">
+      <DependentUpon>CEOSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CEOUserM.resx">
       <DependentUpon>CEOUserM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CFODashbord.resx">
+      <DependentUpon>CFODashbord.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CFOLogin.resx">
       <DependentUpon>CFOLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CFOSettings.resx">
+      <DependentUpon>CFOSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CFOUserM.resx">
       <DependentUpon>CFOUserM.cs</DependentUpon>
@@ -637,6 +709,9 @@
     <EmbeddedResource Include="DCReports.resx">
       <DependentUpon>DCReports.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DDashbord.resx">
+      <DependentUpon>DDashbord.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DDCrystal.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>DDCrystal.cs</LastGenOutput>
@@ -659,6 +734,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DGMUserM.resx">
       <DependentUpon>DGMUserM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DPDocument.resx">
+      <DependentUpon>DPDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DSettings.resx">
+      <DependentUpon>DSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FPCReport.resx">
       <DependentUpon>FPCReport.cs</DependentUpon>
@@ -687,14 +768,33 @@
     <EmbeddedResource Include="GDReports.resx">
       <DependentUpon>GDReports.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HLoans.resx">
+      <DependentUpon>HLoans.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ILoan.resx">
       <DependentUpon>ILoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IssueLoan.resx">
       <DependentUpon>IssueLoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LCCrystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LCCrystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LCollections.resx">
+      <DependentUpon>LCollections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LCReports.resx">
+      <DependentUpon>LCReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LEDashbord.resx">
+      <DependentUpon>LEDashbord.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LELogin.resx">
       <DependentUpon>LELogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LESettings.resx">
+      <DependentUpon>LESettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LEUserM.resx">
       <DependentUpon>LEUserM.cs</DependentUpon>
@@ -749,6 +849,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MUserM.resx">
       <DependentUpon>MUserM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NInvestments.resx">
+      <DependentUpon>NInvestments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PCCrystal.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

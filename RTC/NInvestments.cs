@@ -11,13 +11,12 @@ using System.Windows.Forms;
 
 namespace RTC
 {
-    public partial class CFODashbord : Form
+    public partial class NInvestments : Form
     {
-        public CFODashbord()
+        public NInvestments()
         {
             InitializeComponent();
             populate();
-            panel6.Hide();
         }
         public String conString = "Data Source=CHETHANA;Initial Catalog=RTC;Integrated Security=True;";
 
@@ -28,12 +27,12 @@ namespace RTC
 
                 SqlConnection con = new SqlConnection(conString);
                 con.Open();
-                String Query = "select * from FDWithdrawalsTB";
+                String Query = "select * from FDAccountTB";
                 SqlDataAdapter sda = new SqlDataAdapter(Query, con);
                 SqlCommandBuilder builder = new SqlCommandBuilder(sda);
                 var ds = new DataSet();
                 sda.Fill(ds);
-                PADGV.DataSource = ds.Tables[0];
+                IADGV.DataSource = ds.Tables[0];
                 con.Close();
             }
             catch (Exception ex)
@@ -41,7 +40,20 @@ namespace RTC
                 Console.WriteLine(ex.Message);
             }
         }
-        int key = 0;
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Login obj = new Login();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            CEODashbord obj = new CEODashbord();
+            obj.Show();
+            this.Hide();
+        }
+
         private void SaveBt_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(conString);
@@ -57,9 +69,9 @@ namespace RTC
                 con.Open();
 
                 // Use the selected value from the combo box, not the index
-                SqlCommand cmd = new SqlCommand("UPDATE FDWithdrawalsTB SET Status = @FS WHERE FDWID = @Fkey", con);
-                cmd.Parameters.AddWithValue("@FS", StatusTB.SelectedItem.ToString());
-                cmd.Parameters.AddWithValue("@Fkey", key);
+                SqlCommand cmd = new SqlCommand("UPDATE FDAccountTB SET Status = @IS WHERE FDID = @Ikey", con);
+                cmd.Parameters.AddWithValue("@IS", StatusTB.SelectedItem.ToString());
+                cmd.Parameters.AddWithValue("@Ikey", key);
 
                 int rowsAffected = cmd.ExecuteNonQuery();
                 if (rowsAffected > 0)
@@ -74,12 +86,11 @@ namespace RTC
                 // Clear fields and r Acefresh data grid view
 
                 AccountNoTB.Clear();
-                AmountTB.Clear();
-
-               
-
-
+                NameTB.Clear();
+                ContactTB.Clear();
+                AddressTB.Clear();
                 StatusTB.SelectedIndex = -1; // Reset the combo box
+                NICTB.Clear();
 
                 populate();
             }
@@ -92,14 +103,17 @@ namespace RTC
                 con.Close();
             }
         }
+        int key = 0;
 
-        private void PADGV_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void IADGV_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            
-            AccountNoTB.Text = PADGV.SelectedRows[0].Cells[1].Value.ToString();
-            AmountTB.Text = PADGV.SelectedRows[0].Cells[3].Value.ToString();
-            dateTB.Text = PADGV.SelectedRows[0].Cells[2].Value.ToString();
-            StatusTB.Text = PADGV.SelectedRows[0].Cells[4].Value.ToString();
+            AccountNoTB.Text = IADGV.SelectedRows[0].Cells[0].Value.ToString();
+            NameTB.Text = IADGV.SelectedRows[0].Cells[1].Value.ToString();
+            ContactTB.Text = IADGV.SelectedRows[0].Cells[4].Value.ToString();
+            AddressTB.Text = IADGV.SelectedRows[0].Cells[2].Value.ToString();
+            NICTB.Text = IADGV.SelectedRows[0].Cells[3].Value.ToString();
+            dateTB.Text = IADGV.SelectedRows[0].Cells[5].Value.ToString();
+            StatusTB.Text = IADGV.SelectedRows[0].Cells[9].Value.ToString();
 
             if (AccountNoTB.Text == "")
             {
@@ -107,27 +121,8 @@ namespace RTC
             }
             else
             {
-                key = Convert.ToInt32(PADGV.SelectedRows[0].Cells[0].Value.ToString());
+                key = Convert.ToInt32(IADGV.SelectedRows[0].Cells[0].Value.ToString());
             }
         }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-            Login obj = new Login();
-            obj.Show();
-            this.Hide();
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-            panel6.Show();
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-            CFOSettings obj = new CFOSettings();
-            obj.Show();
-            this.Hide();
-        }
-    }   
+    }
 }

@@ -1,6 +1,6 @@
 ﻿namespace RTC
 {
-    partial class MNPAccounts
+    partial class NInvestments
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel10 = new System.Windows.Forms.Panel();
-            this.GenderTB = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.NICTB = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.AddressTB = new System.Windows.Forms.TextBox();
             this.AccountNoTB = new System.Windows.Forms.TextBox();
@@ -44,14 +44,8 @@
             this.dateTB = new System.Windows.Forms.DateTimePicker();
             this.NameTB = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.PADGV = new System.Windows.Forms.DataGridView();
+            this.IADGV = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -62,14 +56,12 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PADGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IADGV)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel2.SuspendLayout();
@@ -77,15 +69,15 @@
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.LightGray;
-            this.panel10.Controls.Add(this.GenderTB);
-            this.panel10.Controls.Add(this.label3);
+            this.panel10.Controls.Add(this.NICTB);
+            this.panel10.Controls.Add(this.label6);
             this.panel10.Controls.Add(this.label1);
             this.panel10.Controls.Add(this.AddressTB);
             this.panel10.Controls.Add(this.AccountNoTB);
@@ -100,30 +92,30 @@
             this.panel10.Controls.Add(this.NameTB);
             this.panel10.Controls.Add(this.label23);
             this.panel10.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel10.Location = new System.Drawing.Point(368, 162);
+            this.panel10.Location = new System.Drawing.Point(368, 160);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(1120, 287);
             this.panel10.TabIndex = 12;
             // 
-            // GenderTB
+            // NICTB
             // 
-            this.GenderTB.Location = new System.Drawing.Point(209, 180);
-            this.GenderTB.Multiline = true;
-            this.GenderTB.Name = "GenderTB";
-            this.GenderTB.ReadOnly = true;
-            this.GenderTB.Size = new System.Drawing.Size(190, 30);
-            this.GenderTB.TabIndex = 34;
+            this.NICTB.Location = new System.Drawing.Point(235, 181);
+            this.NICTB.Multiline = true;
+            this.NICTB.Name = "NICTB";
+            this.NICTB.ReadOnly = true;
+            this.NICTB.Size = new System.Drawing.Size(202, 30);
+            this.NICTB.TabIndex = 36;
             // 
-            // label3
+            // label6
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(188, 144);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 26);
-            this.label3.TabIndex = 33;
-            this.label3.Text = "Gender :";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label6.Location = new System.Drawing.Point(214, 145);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 26);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "NIC No:";
             // 
             // label1
             // 
@@ -144,7 +136,6 @@
             this.AddressTB.ReadOnly = true;
             this.AddressTB.Size = new System.Drawing.Size(202, 30);
             this.AddressTB.TabIndex = 31;
-            this.AddressTB.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // AccountNoTB
             // 
@@ -161,7 +152,7 @@
             this.StatusTB.Items.AddRange(new object[] {
             "Approve",
             "Reject"});
-            this.StatusTB.Location = new System.Drawing.Point(686, 183);
+            this.StatusTB.Location = new System.Drawing.Point(734, 180);
             this.StatusTB.Name = "StatusTB";
             this.StatusTB.Size = new System.Drawing.Size(202, 30);
             this.StatusTB.TabIndex = 28;
@@ -182,7 +173,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label20.Location = new System.Drawing.Point(656, 144);
+            this.label20.Location = new System.Drawing.Point(707, 145);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(155, 26);
             this.label20.TabIndex = 21;
@@ -212,7 +203,7 @@
             // 
             this.SaveBt.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveBt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.SaveBt.Location = new System.Drawing.Point(448, 233);
+            this.SaveBt.Location = new System.Drawing.Point(492, 233);
             this.SaveBt.Name = "SaveBt";
             this.SaveBt.Size = new System.Drawing.Size(147, 36);
             this.SaveBt.TabIndex = 7;
@@ -225,7 +216,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label18.Location = new System.Drawing.Point(421, 144);
+            this.label18.Location = new System.Drawing.Point(498, 145);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(68, 26);
             this.label18.TabIndex = 16;
@@ -235,7 +226,7 @@
             // 
             this.dateTB.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTB.Location = new System.Drawing.Point(437, 183);
+            this.dateTB.Location = new System.Drawing.Point(523, 181);
             this.dateTB.Name = "dateTB";
             this.dateTB.Size = new System.Drawing.Size(158, 30);
             this.dateTB.TabIndex = 15;
@@ -260,101 +251,29 @@
             this.label23.TabIndex = 0;
             this.label23.Text = "Name :";
             // 
-            // PADGV
+            // IADGV
             // 
-            this.PADGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.PADGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PADGV.Location = new System.Drawing.Point(325, 465);
-            this.PADGV.Name = "PADGV";
-            this.PADGV.RowHeadersWidth = 51;
-            this.PADGV.RowTemplate.Height = 24;
-            this.PADGV.Size = new System.Drawing.Size(1200, 366);
-            this.PADGV.TabIndex = 11;
-            this.PADGV.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.PADGV_RowHeaderMouseClick);
+            this.IADGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.IADGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.IADGV.Location = new System.Drawing.Point(325, 465);
+            this.IADGV.Name = "IADGV";
+            this.IADGV.RowHeadersWidth = 51;
+            this.IADGV.RowTemplate.Height = 24;
+            this.IADGV.Size = new System.Drawing.Size(1200, 366);
+            this.IADGV.TabIndex = 11;
+            this.IADGV.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.IADGV_RowHeaderMouseClick);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.panel10);
-            this.panel1.Controls.Add(this.PADGV);
+            this.panel1.Controls.Add(this.IADGV);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1544, 845);
-            this.panel1.TabIndex = 5;
-            // 
-            // panel8
-            // 
-            this.panel8.BackgroundImage = global::RTC.Properties.Resources.Screenshot_2024_11_17_14101911;
-            this.panel8.Controls.Add(this.panel6);
-            this.panel8.Controls.Add(this.label16);
-            this.panel8.Controls.Add(this.label15);
-            this.panel8.Controls.Add(this.label14);
-            this.panel8.Location = new System.Drawing.Point(310, 89);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1232, 44);
-            this.panel8.TabIndex = 34;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.label12);
-            this.panel6.Location = new System.Drawing.Point(6, 7);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(198, 37);
-            this.panel6.TabIndex = 35;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label12.Location = new System.Drawing.Point(13, 5);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(171, 26);
-            this.label12.TabIndex = 28;
-            this.label12.Text = " Poddo Accounts";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(681, 10);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(217, 26);
-            this.label16.TabIndex = 31;
-            this.label16.Text = " Investment Accounts";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(448, 10);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(196, 26);
-            this.label15.TabIndex = 30;
-            this.label15.Text = " Garusaru Accounts";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(218, 10);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(189, 26);
-            this.label14.TabIndex = 29;
-            this.label14.Text = " Divisaru Accounts";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
+            this.panel1.TabIndex = 9;
             // 
             // panel3
             // 
@@ -385,9 +304,9 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(122, 18);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(762, 50);
+            this.label5.Size = new System.Drawing.Size(671, 50);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Finance Management System -Manager";
+            this.label5.Text = "Finance Management System -CEO";
             // 
             // panel2
             // 
@@ -459,12 +378,34 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.pictureBox2);
+            this.panel4.Controls.Add(this.label2);
             this.panel4.Location = new System.Drawing.Point(4, 201);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(304, 54);
             this.panel4.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::RTC.Properties.Resources.user_account_solid_24__2_;
+            this.pictureBox2.Location = new System.Drawing.Point(10, 7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(51, 38);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 33;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(67, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(167, 26);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "New Investment";
             // 
             // pictureBox1
             // 
@@ -476,45 +417,19 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::RTC.Properties.Resources.user_account_solid_24__2_;
-            this.pictureBox3.Location = new System.Drawing.Point(10, 7);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(51, 38);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 33;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(67, 15);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(148, 26);
-            this.label6.TabIndex = 34;
-            this.label6.Text = "New Accounts";
-            // 
-            // MNPAccounts
+            // NInvestments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1544, 844);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "MNPAccounts";
+            this.Name = "NInvestments";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PADGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IADGV)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -526,16 +441,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.TextBox NICTB;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox AddressTB;
         private System.Windows.Forms.TextBox AccountNoTB;
         private System.Windows.Forms.ComboBox StatusTB;
         private System.Windows.Forms.Label label17;
@@ -547,29 +472,13 @@
         private System.Windows.Forms.DateTimePicker dateTB;
         private System.Windows.Forms.TextBox NameTB;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.DataGridView PADGV;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView IADGV;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox AddressTB;
-        private System.Windows.Forms.TextBox GenderTB;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel3;
     }
 }

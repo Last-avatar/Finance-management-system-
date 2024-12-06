@@ -44,6 +44,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.DGMDGV = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -55,10 +58,14 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGMDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel8);
+            this.panel1.Controls.Add(this.DGMDGV);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -238,6 +245,39 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // panel8
+            // 
+            this.panel8.BackgroundImage = global::RTC.Properties.Resources.Screenshot_2024_11_17_14101911;
+            this.panel8.Controls.Add(this.label12);
+            this.panel8.Location = new System.Drawing.Point(310, 90);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1176, 44);
+            this.panel8.TabIndex = 35;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(14, 10);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(227, 26);
+            this.label12.TabIndex = 28;
+            this.label12.Text = "View Financial Reports";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // DGMDGV
+            // 
+            this.DGMDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGMDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGMDGV.Location = new System.Drawing.Point(329, 149);
+            this.DGMDGV.Name = "DGMDGV";
+            this.DGMDGV.RowHeadersWidth = 51;
+            this.DGMDGV.RowTemplate.Height = 24;
+            this.DGMDGV.Size = new System.Drawing.Size(1144, 610);
+            this.DGMDGV.TabIndex = 34;
+            // 
             // ADashbord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -262,6 +302,9 @@
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGMDGV)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -284,5 +327,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView DGMDGV;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label12;
     }
 }

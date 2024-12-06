@@ -29,7 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.NICTB = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.GenderTB = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,14 +54,6 @@
             this.NameTB = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.DADGV = new System.Windows.Forms.DataGridView();
-            this.NICTB = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -64,14 +64,14 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DADGV)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DADGV)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel2.SuspendLayout();
@@ -79,8 +79,8 @@
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -95,6 +95,79 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1544, 845);
             this.panel1.TabIndex = 6;
+            // 
+            // panel8
+            // 
+            this.panel8.BackgroundImage = global::RTC.Properties.Resources.Screenshot_2024_11_17_14101911;
+            this.panel8.Controls.Add(this.label12);
+            this.panel8.Controls.Add(this.panel6);
+            this.panel8.Controls.Add(this.label16);
+            this.panel8.Controls.Add(this.label15);
+            this.panel8.Location = new System.Drawing.Point(310, 89);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1232, 44);
+            this.panel8.TabIndex = 34;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(22, 10);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(171, 26);
+            this.label12.TabIndex = 28;
+            this.label12.Text = " Poddo Accounts";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.label14);
+            this.panel6.Location = new System.Drawing.Point(216, 7);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(209, 37);
+            this.panel6.TabIndex = 35;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label14.Location = new System.Drawing.Point(7, 4);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(183, 26);
+            this.label14.TabIndex = 29;
+            this.label14.Text = "Divisaru Accounts";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(681, 10);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(217, 26);
+            this.label16.TabIndex = 31;
+            this.label16.Text = " Investment Accounts";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(448, 10);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(196, 26);
+            this.label15.TabIndex = 30;
+            this.label15.Text = " Garusaru Accounts";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // panel10
             // 
@@ -121,6 +194,26 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(1120, 287);
             this.panel10.TabIndex = 12;
+            // 
+            // NICTB
+            // 
+            this.NICTB.Location = new System.Drawing.Point(112, 180);
+            this.NICTB.Multiline = true;
+            this.NICTB.Name = "NICTB";
+            this.NICTB.ReadOnly = true;
+            this.NICTB.Size = new System.Drawing.Size(202, 30);
+            this.NICTB.TabIndex = 36;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label6.Location = new System.Drawing.Point(91, 144);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 26);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "NIC No:";
             // 
             // GenderTB
             // 
@@ -289,99 +382,6 @@
             this.DADGV.TabIndex = 11;
             this.DADGV.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DADGV_RowHeaderMouseClick);
             // 
-            // NICTB
-            // 
-            this.NICTB.Location = new System.Drawing.Point(112, 180);
-            this.NICTB.Multiline = true;
-            this.NICTB.Name = "NICTB";
-            this.NICTB.ReadOnly = true;
-            this.NICTB.Size = new System.Drawing.Size(202, 30);
-            this.NICTB.TabIndex = 36;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(91, 144);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 26);
-            this.label6.TabIndex = 35;
-            this.label6.Text = "NIC No:";
-            // 
-            // panel8
-            // 
-            this.panel8.BackgroundImage = global::RTC.Properties.Resources.Screenshot_2024_11_17_14101911;
-            this.panel8.Controls.Add(this.label12);
-            this.panel8.Controls.Add(this.panel6);
-            this.panel8.Controls.Add(this.label16);
-            this.panel8.Controls.Add(this.label15);
-            this.panel8.Location = new System.Drawing.Point(310, 89);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1232, 44);
-            this.panel8.TabIndex = 34;
-            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(22, 10);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(171, 26);
-            this.label12.TabIndex = 28;
-            this.label12.Text = " Poddo Accounts";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.label14);
-            this.panel6.Location = new System.Drawing.Point(216, 7);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(209, 37);
-            this.panel6.TabIndex = 35;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label14.Location = new System.Drawing.Point(7, 4);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(183, 26);
-            this.label14.TabIndex = 29;
-            this.label14.Text = "Divisaru Accounts";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(681, 10);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(217, 26);
-            this.label16.TabIndex = 31;
-            this.label16.Text = " Investment Accounts";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(448, 10);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(196, 26);
-            this.label15.TabIndex = 30;
-            this.label15.Text = " Garusaru Accounts";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
-            // 
             // panel3
             // 
             this.panel3.BackgroundImage = global::RTC.Properties.Resources.Screenshot_2024_11_17_14101911;
@@ -492,28 +492,6 @@
             this.panel4.Size = new System.Drawing.Size(304, 54);
             this.panel4.TabIndex = 1;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::RTC.Properties.Resources.bank_solid_24__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(10, 9);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(51, 38);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 31;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(67, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 26);
-            this.label2.TabIndex = 32;
-            this.label2.Text = " Loan Requests";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::RTC.Properties.Resources.RTC_Logo_No_02;
@@ -523,6 +501,28 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::RTC.Properties.Resources.user_account_solid_24__2_;
+            this.pictureBox2.Location = new System.Drawing.Point(10, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(51, 38);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 33;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(67, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(148, 26);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "New Accounts";
             // 
             // MNDAccounts
             // 
@@ -534,13 +534,13 @@
             this.Name = "MNDAccounts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DADGV)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DADGV)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -552,8 +552,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -594,10 +594,10 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox NICTB;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label2;
     }
 }

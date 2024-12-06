@@ -11,13 +11,12 @@ using System.Windows.Forms;
 
 namespace RTC
 {
-    public partial class CFODashbord : Form
+    public partial class HLoans : Form
     {
-        public CFODashbord()
+        public HLoans()
         {
             InitializeComponent();
             populate();
-            panel6.Hide();
         }
         public String conString = "Data Source=CHETHANA;Initial Catalog=RTC;Integrated Security=True;";
 
@@ -28,21 +27,22 @@ namespace RTC
 
                 SqlConnection con = new SqlConnection(conString);
                 con.Open();
-                String Query = "select * from FDWithdrawalsTB";
+                String Query = "select * from LoanRequestsTB";
                 SqlDataAdapter sda = new SqlDataAdapter(Query, con);
                 SqlCommandBuilder builder = new SqlCommandBuilder(sda);
                 var ds = new DataSet();
                 sda.Fill(ds);
-                PADGV.DataSource = ds.Tables[0];
+                MlRDGV.DataSource = ds.Tables[0];
                 con.Close();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
+
         }
-        int key = 0;
-        private void SaveBt_Click(object sender, EventArgs e)
+
+        private void SaveLoan()
         {
             SqlConnection con = new SqlConnection(conString);
 
@@ -57,27 +57,25 @@ namespace RTC
                 con.Open();
 
                 // Use the selected value from the combo box, not the index
-                SqlCommand cmd = new SqlCommand("UPDATE FDWithdrawalsTB SET Status = @FS WHERE FDWID = @Fkey", con);
-                cmd.Parameters.AddWithValue("@FS", StatusTB.SelectedItem.ToString());
-                cmd.Parameters.AddWithValue("@Fkey", key);
+                SqlCommand cmd = new SqlCommand("UPDATE LoanRequestsTB SET LoanStatus = @LS WHERE LID = @Lkey", con);
+                cmd.Parameters.AddWithValue("@LS", StatusTB.SelectedItem.ToString());
+                cmd.Parameters.AddWithValue("@Lkey", key);
 
                 int rowsAffected = cmd.ExecuteNonQuery();
                 if (rowsAffected > 0)
                 {
-                    MessageBox.Show("Account Updated!!!");
+                    MessageBox.Show("Loan Updated!!!");
                 }
                 else
                 {
                     MessageBox.Show("No record found to update.");
                 }
 
-                // Clear fields and r Acefresh data grid view
-
+                // Clear fields and refresh data grid view
+                AccountTyTB.Clear();
                 AccountNoTB.Clear();
-                AmountTB.Clear();
-
-               
-
+                NameTB.Clear();
+                NICTB.Clear();
 
                 StatusTB.SelectedIndex = -1; // Reset the combo box
 
@@ -93,24 +91,6 @@ namespace RTC
             }
         }
 
-        private void PADGV_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            
-            AccountNoTB.Text = PADGV.SelectedRows[0].Cells[1].Value.ToString();
-            AmountTB.Text = PADGV.SelectedRows[0].Cells[3].Value.ToString();
-            dateTB.Text = PADGV.SelectedRows[0].Cells[2].Value.ToString();
-            StatusTB.Text = PADGV.SelectedRows[0].Cells[4].Value.ToString();
-
-            if (AccountNoTB.Text == "")
-            {
-                key = 0;
-            }
-            else
-            {
-                key = Convert.ToInt32(PADGV.SelectedRows[0].Cells[0].Value.ToString());
-            }
-        }
-
         private void label4_Click(object sender, EventArgs e)
         {
             Login obj = new Login();
@@ -118,16 +98,35 @@ namespace RTC
             this.Hide();
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void label13_Click(object sender, EventArgs e)
         {
-            panel6.Show();
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-            CFOSettings obj = new CFOSettings();
+            CEODashbord obj = new CEODashbord();
             obj.Show();
             this.Hide();
         }
-    }   
+        int key=0; 
+        private void MlRDGV_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            AccountTyTB.Text = MlRDGV.SelectedRows[0].Cells[1].Value.ToString();
+            AccountNoTB.Text = MlRDGV.SelectedRows[0].Cells[2].Value.ToString();
+            NameTB.Text = MlRDGV.SelectedRows[0].Cells[3].Value.ToString();
+            NICTB.Text = MlRDGV.SelectedRows[0].Cells[4].Value.ToString();
+            dateTB.Text = MlRDGV.SelectedRows[0].Cells[5].Value.ToString();
+            StatusTB.Text = MlRDGV.SelectedRows[0].Cells[6].Value.ToString();
+
+            if (AccountTyTB.Text == "")
+            {
+                key = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(MlRDGV.SelectedRows[0].Cells[0].Value.ToString());
+            }
+        }
+
+        private void SaveBt_Click(object sender, EventArgs e)
+        {
+            SaveLoan();
+        }
+    }
 }

@@ -20,6 +20,11 @@ namespace RTC
         public String conString = "Data Source=CHETHANA;Initial Catalog=RTC;Integrated Security=True;";
         private void LoginBt_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void LoginBt_Click_1(object sender, EventArgs e)
+        {
             SqlConnection con = new SqlConnection(conString);
             if (UsernameTB.Text == "" || PasswordTB.Text == "")
             {
