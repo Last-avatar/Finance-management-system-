@@ -63,6 +63,8 @@ namespace RTC
                     cmd.Parameters.AddWithValue("@DA", AddressTb.Text);
                     cmd.Parameters.AddWithValue("@DE", EmailTb.Text);
                     cmd.Parameters.AddWithValue("@DD", dateTB.Value.Date);
+                    cmd.Parameters.AddWithValue("@Dkey", key);
+
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Account Updated!!!");
                     NameTB.Clear();
@@ -70,7 +72,7 @@ namespace RTC
                     ContactNoTb.Clear();
                     AddressTb.Clear();
                     EmailTb.Clear();
-                   
+                    populate();                   
                 }
                 catch (Exception Ex)
                 {

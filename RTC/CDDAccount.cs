@@ -233,8 +233,11 @@ namespace RTC
                         // Display the updated balance
                         MessageBox.Show($"Deposit successfully recorded! New Balance: {newBalance:C}");
 
-                        // Refresh the DataGridView
-                        populate();
+                    // Refresh the DataGridView
+                    NameTB.Clear();
+                    NICTb.Clear();
+                    DepositTB.Clear();
+                    populate();
                     }
                     catch (Exception ex)
                     {

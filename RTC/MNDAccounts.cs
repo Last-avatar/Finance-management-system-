@@ -158,7 +158,7 @@ namespace RTC
 
         private void label16_Click(object sender, EventArgs e)
         {
-            MNGAccounts obj = new MNGAccounts();
+            MNIAccounts obj = new MNIAccounts();
             obj.Show();
             this.Hide();
         }

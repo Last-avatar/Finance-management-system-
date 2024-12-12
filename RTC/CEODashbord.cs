@@ -16,7 +16,7 @@ namespace RTC
         public CEODashbord()
         {
             InitializeComponent();
-            panel3.Hide();
+            panel6.Hide();
         }
         public String conString = "Data Source=CHETHANA;Initial Catalog=RTC;Integrated Security=True;";
 private void label12_Click(object sender, EventArgs e)
@@ -55,7 +55,7 @@ private void label12_Click(object sender, EventArgs e)
 
         private void label8_Click(object sender, EventArgs e)
         {
-            panel3.Show();
+            panel6.Show();
         }
 
         private void label11_Click(object sender, EventArgs e)

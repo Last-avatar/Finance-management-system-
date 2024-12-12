@@ -170,6 +170,9 @@ namespace RTC
                         MessageBox.Show($"Deposit successfully recorded!\nNew Balance: {newBalance}");
 
                         // Refresh the DataGridView
+                        NameTB.Clear();
+                        NICTB.Clear();
+                        DepositTb.Clear();
                         populate();
                     }
                     catch (Exception ex)

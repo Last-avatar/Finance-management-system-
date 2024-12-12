@@ -158,7 +158,7 @@ namespace RTC
                     NameTB.Text = reader["Name"].ToString();
                     ContactTB.Text = reader["Contact_no"].ToString();
                     AddressTB.Text = reader["Address"].ToString();
-                   
+                    GenderTB.Text = reader["Gender"].ToString();
                     NICTB.Text = reader["NIC"].ToString();
                     dateTB.Text = reader["Date"].ToString();
                     StatusTB.Text = reader["Status"].ToString();
@@ -218,7 +218,7 @@ namespace RTC
 
         private void PrintBT_Click(object sender, EventArgs e)
         {
-            DDReports obj = new DDReports();
+            GDReports obj = new GDReports();
             obj.Show();
         }
     }

@@ -49,13 +49,16 @@ namespace RTC
             {
                 MessageBox.Show("Missing Information!!!");
             }
+            else if (key == 0)
+            {
+                MessageBox.Show("Please select a valid account from the table!");
+            }
             else
             {
                 try
                 {
                     con.Open();
-
-                    SqlCommand cmd = new SqlCommand("update FDAccountTB set Name = @FDN, Address = @FDA, NIC = @FDNc, Contact_no = @FDC,Date = @FDD,Email = @FDE,Civil_status = @FDCS  where FDID = @FDkey", con);
+                    SqlCommand cmd = new SqlCommand("update FDAccountTB set Name = @FDN, Address = @FDA, NIC = @FDNc, Contact_no = @FDC, Date = @FDD, Email = @FDE, Civil_status = @FDCS where FDID = @FDkey", con);
                     cmd.Parameters.AddWithValue("@FDN", FDNameTB.Text);
                     cmd.Parameters.AddWithValue("@FDA", AddressTb.Text);
                     cmd.Parameters.AddWithValue("@FDNc", NICNoTb.Text);
@@ -63,14 +66,17 @@ namespace RTC
                     cmd.Parameters.AddWithValue("@FDD", dateTB.Value.Date);
                     cmd.Parameters.AddWithValue("@FDE", EmailTb.Text);
                     cmd.Parameters.AddWithValue("@FDCS", CStatusCB.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@FDkey", key); // Ensure this is set
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Account Updated!!!");
+
                     FDNameTB.Clear();
                     AddressTb.Clear();
                     NICNoTb.Clear();
                     ContactNoTb.Clear();
                     EmailTb.Clear();
+                    populate();
                 }
                 catch (Exception Ex)
                 {
@@ -82,6 +88,7 @@ namespace RTC
                 }
             }
         }
+
         int key = 0;
         private void DeleteAccount()
         {
@@ -209,6 +216,7 @@ namespace RTC
             else
             {
                 key = Convert.ToInt32(FDDGV.SelectedRows[0].Cells[0].Value.ToString());
+               
             }
         }
 

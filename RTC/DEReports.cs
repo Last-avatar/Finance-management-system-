@@ -348,7 +348,7 @@ namespace RTC
         {
             DECReport obj = new DECReport();
             obj.Show();
-            this.Hide();
+            
         }
     }
 }

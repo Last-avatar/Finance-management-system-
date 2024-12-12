@@ -227,6 +227,9 @@ namespace RTC
                     MessageBox.Show("Deposit successfully recorded and balance updated!");
 
                     // Refresh the DataGridView
+                    NameTB.Clear();
+                    NICTb.Clear();
+                    DepositTB.Clear();
                     populate();
                 }
                 catch (Exception ex)

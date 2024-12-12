@@ -55,7 +55,7 @@ namespace RTC
                 {
                     con.Open();
 
-                    SqlCommand cmd = new SqlCommand("update PoddoAccountTB set HName = @PHN,GName =@PGN,NIC = @PN,Contact_no = @PCn,Address = @PA,Email = @PE,Date = @PD,DBO =@PDob ,Gender = @PG,BC_No = PBn  where PID = @Pkey", con);
+                    SqlCommand cmd = new SqlCommand("update PoddoAccountTB set HName = @PHN,GName =@PGN,NIC = @PN,Contact_no = @PCn,Address = @PA,Email = @PE,Date = @PD,DOB =@PDob ,Gender = @PG,BC_No = @PBn  where PID = @Pkey", con);
                     cmd.Parameters.AddWithValue("@PHN", PNameTB.Text);
                     cmd.Parameters.AddWithValue("@PGN", GNameTB.Text);
                     cmd.Parameters.AddWithValue("@PN", NICNoTb.Text);
@@ -66,6 +66,7 @@ namespace RTC
                     cmd.Parameters.AddWithValue("@PDob", DBOTB.Value.Date);
                     cmd.Parameters.AddWithValue("@PG", GenderTB.SelectedItem.ToString());
                     cmd.Parameters.AddWithValue("@PBn", BCnoTB.Text);
+                    cmd.Parameters.AddWithValue("@Pkey",key);
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Account Updated!!!");
@@ -76,6 +77,7 @@ namespace RTC
                     AddressTb.Clear();
                     EmailTb.Clear();
                     BCnoTB.Clear();
+                    populate();
                 }
                 catch (Exception Ex)
                 {

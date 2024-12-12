@@ -107,6 +107,7 @@
             this.CPasswordTb.Location = new System.Drawing.Point(52, 89);
             this.CPasswordTb.Multiline = true;
             this.CPasswordTb.Name = "CPasswordTb";
+            this.CPasswordTb.PasswordChar = '*';
             this.CPasswordTb.Size = new System.Drawing.Size(216, 31);
             this.CPasswordTb.TabIndex = 11;
             // 
@@ -127,6 +128,7 @@
             this.NPasswordTb.Location = new System.Drawing.Point(52, 32);
             this.NPasswordTb.Multiline = true;
             this.NPasswordTb.Name = "NPasswordTb";
+            this.NPasswordTb.PasswordChar = '*';
             this.NPasswordTb.Size = new System.Drawing.Size(216, 31);
             this.NPasswordTb.TabIndex = 9;
             // 
@@ -160,6 +162,7 @@
             this.OPasswordTB.Location = new System.Drawing.Point(79, 307);
             this.OPasswordTB.Multiline = true;
             this.OPasswordTB.Name = "OPasswordTB";
+            this.OPasswordTB.PasswordChar = '*';
             this.OPasswordTB.Size = new System.Drawing.Size(216, 31);
             this.OPasswordTB.TabIndex = 7;
             this.OPasswordTB.Leave += new System.EventHandler(this.OPasswordTB_Leave);

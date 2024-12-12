@@ -267,6 +267,10 @@ namespace RTC
                             }
 
                             MessageBox.Show("Deposit recorded successfully! New Balance: " + newBalance.ToString("C"));
+                        NameTB.Clear();
+                       
+                        DepositTB.Clear();
+                        populate();
                         }
                     }
                     catch (Exception ex)
